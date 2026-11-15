@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="North Star Coaching — Coach Sam Rivera. Get clear on your next step with a free 30-minute call. Sample design.">
+<title>North Star Coaching — Get clear on your next step</title>
+<style>
+:root{--indigo:#4F46E5;--indigo-dark:#3730A3;--coral:#FB7185;--coral-dark:#E11D48;--lavender:#EEF2FF;--ink:#1E1B4B;--body:#33324A;--muted:#5B5A72;--line:#E0E7FF;--white:#fff}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;font-size:17px;line-height:1.65;color:var(--body);background:var(--white)}
+h1,h2,h3{color:var(--ink);line-height:1.25}
+a{color:var(--indigo)}
+:focus-visible{outline:3px solid var(--coral);outline-offset:2px;border-radius:6px}
+img{max-width:100%;display:block}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+section{padding:56px 0}
+.eyebrow{display:inline-block;font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--indigo);background:var(--lavender);padding:6px 12px;border-radius:999px;margin-bottom:14px}
+h2{font-size:28px;margin-bottom:10px}
+.sub{color:var(--muted);max-width:580px;margin-bottom:28px}
+.btn{display:inline-block;text-align:center;text-decoration:none;font-size:17px;font-weight:700;line-height:1.3;padding:14px 26px;border-radius:999px;border:none;cursor:pointer}
+.btn-primary{background:var(--coral);color:#fff;box-shadow:0 6px 18px rgba(251,113,133,.45)}
+.btn-primary:hover{background:var(--coral-dark)}
+.btn-indigo{background:var(--indigo);color:#fff}
+.btn-indigo:hover{background:var(--indigo-dark)}
+.btn-outline{background:rgba(255,255,255,.95);color:var(--indigo);border:2px solid #fff}
+.btn-small{padding:10px 18px;font-size:15px}
+.badge{display:inline-block;font-size:12px;font-weight:700;color:var(--indigo-dark);background:#fff;border:1px dashed var(--indigo);padding:3px 10px;border-radius:999px;white-space:nowrap}
+/* Top bar */
+.topbar{background:var(--ink);color:#E0E7FF;text-align:center;font-size:14px;padding:9px 16px}
+.topbar strong{color:#FDE68A}
+/* Header */
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.97);border-bottom:1px solid var(--line)}
+.header-inner{max-width:1080px;margin:0 auto;padding:12px 20px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.brand-mark{width:40px;height:40px;flex:0 0 40px;border-radius:12px;background:linear-gradient(135deg,var(--indigo),#7C3AED);display:flex;align-items:center;justify-content:center}
+.brand-name{font-size:18px;font-weight:800;color:var(--ink);line-height:1.15}
+.brand-name span{display:block;font-size:12px;font-weight:600;color:var(--muted)}
+nav{display:none;gap:20px}
+nav a{text-decoration:none;color:var(--body);font-weight:600;font-size:15px}
+nav a:hover{color:var(--indigo)}
+/* Hero */
+.hero{position:relative;padding:0;color:#fff;overflow:hidden}
+.hero img.hero-photo{width:100%;height:520px;object-fit:cover;object-position:center}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(90deg,rgba(30,27,75,.88) 0%,rgba(79,70,229,.72) 55%,rgba(79,70,229,.35) 100%);display:flex;align-items:center}
+.hero-overlay .wrap{width:100%}
+.hero h1{color:#fff;font-size:38px;letter-spacing:-.01em;margin-bottom:16px;max-width:560px}
+.hero h1 em{font-style:normal;color:#FDE68A}
+.hero-promise{font-size:19px;color:#E0E7FF;max-width:520px;margin-bottom:26px}
+.hero-cta{display:flex;flex-wrap:wrap;gap:12px}
+.hero-note{font-size:14px;color:#C7D2FE;margin-top:16px}
+.hero-note strong{color:#fff}
+/* Trust strip */
+.trust-strip{background:var(--lavender);padding:22px 0;text-align:center}
+.trust-strip .wrap{display:flex;flex-wrap:wrap;gap:18px;justify-content:center;color:var(--ink);font-weight:700;font-size:15px}
+.trust-strip span b{color:var(--indigo);font-size:19px}
+/* Reviews */
+.review-grid{display:grid;gap:18px}
+.review-card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:26px;box-shadow:0 4px 16px rgba(30,27,75,.06)}
+.review-top{display:flex;align-items:center;gap:12px;margin-bottom:12px}
+.avatar{width:52px;height:52px;flex:0 0 52px;border-radius:50%;color:#fff;font-size:18px;font-weight:800;display:flex;align-items:center;justify-content:center}
+.av-indigo{background:var(--indigo)}.av-coral{background:var(--coral-dark)}.av-teal{background:#0F766E}
+.review-top strong{display:block;color:var(--ink)}
+.review-top span{font-size:14px;color:var(--muted)}
+.stars{color:#F59E0B;letter-spacing:2px;font-size:17px;margin-bottom:10px}
+.review-card blockquote{font-size:17px;color:var(--ink);margin-bottom:12px}
+.review-card .outcome{font-size:15px;color:var(--indigo-dark);background:var(--lavender);border-radius:10px;padding:10px 12px}
+.sample-tag{display:inline-block;font-size:12px;font-weight:700;color:var(--indigo-dark);background:var(--lavender);border:1px dashed var(--indigo);padding:3px 9px;border-radius:999px;margin-bottom:10px}
+/* Services */
+.services-grid{display:grid;gap:16px}
+.service-card{border:1px solid var(--line);border-radius:20px;padding:26px;background:#fff}
+.service-card:hover{box-shadow:0 8px 24px rgba(30,27,75,.1)}
+.service-icon{width:50px;height:50px;border-radius:14px;margin-bottom:14px;display:flex;align-items:center;justify-content:center}
+.icon-indigo{background:var(--lavender)}.icon-coral{background:#FFF1F2}
+.service-card h3{font-size:19px;margin-bottom:6px}
+.service-card p{color:var(--muted);margin-bottom:10px}
+.service-card .for{font-size:15px;color:var(--ink)}
+.service-card .for strong{color:var(--indigo)}
+/* About */
+.about{background:var(--lavender)}
+.about-grid{display:grid;gap:32px;align-items:center}
+.about img{border-radius:20px;box-shadow:0 16px 40px rgba(30,27,75,.15)}
+.coach-row{display:flex;align-items:center;gap:14px;margin:18px 0}
+.coach-row .avatar{width:72px;height:72px;flex-basis:72px;font-size:26px}
+.coach-row strong{display:block;color:var(--ink);font-size:18px}
+.coach-row span{font-size:14px;color:var(--muted)}
+.about ul{list-style:none;margin-top:16px}
+.about ul li{padding:7px 0 7px 28px;position:relative}
+.about ul li::before{content:"✓";position:absolute;left:0;top:7px;color:var(--indigo);font-weight:800}
+/* Trust photo band */
+.trust-band{display:grid;gap:18px;align-items:center}
+.trust-band img{border-radius:20px}
+.trust-band blockquote{font-size:20px;color:var(--ink);font-weight:600;line-height:1.5}
+/* How */
+.how{background:var(--ink);color:#E0E7FF}
+.how h2{color:#fff}.how .sub{color:#C7D2FE}
+.steps{display:grid;gap:16px}
+.step{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);border-radius:16px;padding:24px}
+.step-num{width:44px;height:44px;border-radius:50%;background:var(--coral);color:#fff;font-size:20px;font-weight:800;display:flex;align-items:center;justify-content:center;margin-bottom:14px}
+.step h3{color:#fff;font-size:19px;margin-bottom:6px}
+.step p{color:#C7D2FE}
+/* Prices */
+.price-grid{display:grid;gap:16px}
+.price-card{border:1px solid var(--line);border-radius:20px;padding:28px 24px;background:#fff;text-align:center}
+.price-card.featured{border:2px solid var(--indigo);box-shadow:0 12px 32px rgba(79,70,229,.16);position:relative}
+.price-badge{position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:var(--coral);color:#fff;font-size:13px;font-weight:700;padding:4px 14px;border-radius:999px;white-space:nowrap}
+.price-card h3{font-size:19px;margin-bottom:4px}
+.price-amount{font-size:40px;font-weight:800;color:var(--indigo);line-height:1.1;margin:10px 0 4px}
+.price-amount small{font-size:17px;font-weight:600;color:var(--muted)}
+.price-card>p{color:var(--muted);margin-bottom:18px}
+.price-card ul{list-style:none;text-align:left;margin-bottom:20px}
+.price-card ul li{padding:6px 0 6px 26px;position:relative;font-size:15px}
+.price-card ul li::before{content:"✓";position:absolute;left:0;top:6px;color:var(--indigo);font-weight:800}
+.price-note{text-align:center;color:var(--muted);font-size:14px;margin-top:22px}
+/* FAQ */
+.faq{background:var(--lavender)}
+.faq-list{max-width:720px}
+.faq-item{background:#fff;border:1px solid var(--line);border-radius:14px;margin-bottom:12px;overflow:hidden}
+.faq-item button{width:100%;background:none;border:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:18px 20px;font-size:17px;font-weight:700;color:var(--ink);font-family:inherit;text-align:left}
+.faq-item button .chev{font-size:20px;color:var(--indigo);flex:0 0 auto;transition:transform .2s ease}
+.faq-item.open button .chev{transform:rotate(45deg)}
+.faq-answer{padding:0 20px 18px;color:var(--muted);display:none}
+.faq-item.open .faq-answer{display:block}
+/* Contact */
+.contact-grid{display:grid;gap:32px}
+.contact-info h3{font-size:19px;margin-bottom:10px}
+.contact-info p{color:var(--muted);margin-bottom:14px}
+.contact-info a{font-weight:700}
+.map-placeholder{border:2px dashed var(--indigo);border-radius:16px;background:var(--lavender);min-height:150px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;color:var(--indigo-dark);text-align:center;padding:20px;margin-top:20px}
+.map-placeholder strong{font-size:17px}.map-placeholder span{font-size:14px;color:var(--muted)}
+form{background:#fff;border:1px solid var(--line);border-radius:20px;padding:26px;box-shadow:0 8px 24px rgba(30,27,75,.08)}
+form h3{font-size:20px;margin-bottom:6px}
+form>p{color:var(--muted);margin-bottom:20px}
+.field{margin-bottom:16px}
+.field label{display:block;font-weight:700;color:var(--ink);margin-bottom:6px}
+.field input,.field select,.field textarea{width:100%;font:inherit;font-size:16px;color:var(--ink);padding:12px 14px;border:2px solid var(--line);border-radius:12px;background:#fff}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--indigo);outline:3px solid rgba(79,70,229,.25)}
+.field textarea{min-height:110px;resize:vertical}
+form .btn{width:100%}
+.form-msg{display:none;margin-top:14px;padding:12px 16px;border-radius:12px;background:#ECFDF5;color:#065F46;font-weight:600}
+/* Footer */
+footer.site-footer{background:var(--ink);color:#C7D2FE;padding:36px 0 110px}
+footer.site-footer .wrap{display:flex;flex-wrap:wrap;gap:20px;justify-content:space-between;align-items:flex-start}
+footer.site-footer strong{color:#fff;font-size:17px;display:block;margin-bottom:6px}
+footer.site-footer a{color:#fff}
+.sample-footer{font-size:13px;color:#A5B4FC;margin-top:8px}
+/* Sticky call — phones only */
+.sticky-call{display:none;position:fixed;left:12px;right:12px;bottom:12px;z-index:60;background:var(--coral);color:#fff;text-decoration:none;font-size:18px;font-weight:800;text-align:center;padding:15px 20px;border-radius:999px;box-shadow:0 8px 24px rgba(225,29,72,.45)}
+.sticky-call:hover{background:var(--coral-dark)}
+@media(max-width:640px){.sticky-call{display:block}}
+@media(min-width:700px){
+h2{font-size:32px}.hero h1{font-size:48px}.hero img.hero-photo{height:560px}
+nav{display:flex}
+.review-grid{grid-template-columns:repeat(3,1fr)}
+.services-grid{grid-template-columns:repeat(2,1fr)}
+.services-grid .service-card:last-child{grid-column:1/-1}
+.about-grid{grid-template-columns:1fr 1fr}
+.trust-band{grid-template-columns:1fr 1fr}
+.steps{grid-template-columns:repeat(3,1fr)}
+.price-grid{grid-template-columns:repeat(3,1fr);align-items:stretch}
+.contact-grid{grid-template-columns:.9fr 1.1fr}
+section{padding:72px 0}
+footer.site-footer{padding-bottom:36px}
+}
+@media(min-width:1000px){
+.services-grid{grid-template-columns:repeat(3,1fr)}
+.services-grid .service-card:last-child{grid-column:auto}
+.services-grid .service-card:nth-child(4){grid-column:2}
+}
+</style>
+</head>
+<body>
+<div class="topbar"><strong>Free 30-minute call</strong> • No pressure, just a conversation</div>
+<header>
+  <div class="header-inner">
+    <a class="brand" href="#top" aria-label="North Star Coaching — back to top">
+      <span class="brand-mark" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2l2.4 6.9L21 11l-6.6 2.1L12 20l-2.4-6.9L3 11l6.6-2.1L12 2z" fill="#fff"/></svg></span>
+      <span class="brand-name">North Star Coaching<span>Coach Sam Rivera</span></span>
+    </a>
+    <span class="badge">Sample design</span>
+    <nav aria-label="Main navigation"><a href="#programs">Programs</a><a href="#about">About</a><a href="#pricing">Pricing</a><a href="#faq">FAQ</a><a href="#contact">Contact</a></nav>
+    <a class="btn btn-indigo btn-small" href="#contact">Book a free call</a>
+  </div>
+</header>
+<main id="top">
+  <section class="hero" aria-labelledby="hero-heading">
+    <img class="hero-photo" src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Warm coaching discussion around a table, people talking and listening together" fetchpriority="high">
+    <div class="hero-overlay">
+      <div class="wrap">
+        <h1 id="hero-heading">Get clear on <em>your next step</em></h1>
+        <p class="hero-promise">One honest conversation to untangle what's next — for your work, your money, or your life.</p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="#contact">Book a free call</a>
+          <a class="btn btn-outline" href="#programs">See programs</a>
+        </div>
+        <p class="hero-note"><strong>Free 30-minute call.</strong> No pressure, no sales pitch — just a real conversation.</p>
+      </div>
+    </div>
+  </section>
+  <div class="trust-strip" aria-label="Coaching at a glance">
+    <div class="wrap"><span><b>10 years</b> coaching</span><span><b>200+</b> clients supported</span><span><b>30 min</b> free first call</span><span><b>Online</b> or in person</span></div>
+  </div>
+  <section aria-labelledby="reviews-heading">
+    <div class="wrap">
+      <span class="eyebrow">Kind words</span>
+      <h2 id="reviews-heading">People who found their next step</h2>
+      <p class="sub">Real change usually starts small — one honest conversation, one clear decision.</p>
+      <div class="review-grid">
+        <article class="review-card">
+          <span class="sample-tag">Sample review</span>
+          <div class="review-top"><div class="avatar av-indigo" aria-hidden="true">PM</div><div><strong>Priya M.</strong><span>Career change</span></div></div>
+          <div class="stars" role="img" aria-label="Rated 5 out of 5 stars">★★★★★</div>
+          <blockquote>“I went in feeling completely stuck about my career. After three sessions I knew exactly what to do next — and I finally did it.”</blockquote>
+          <p class="outcome">Outcome: left a job she had outgrown and started a role she actually wanted.</p>
+        </article>
+        <article class="review-card">
+          <span class="sample-tag">Sample review</span>
+          <div class="review-top"><div class="avatar av-coral" aria-hidden="true">DK</div><div><strong>Daniel K.</strong><span>6-week reset plan</span></div></div>
+          <div class="stars" role="img" aria-label="Rated 5 out of 5 stars">★★★★★</div>
+          <blockquote>“Sam listens without judging and asks the questions nobody else will. I left every call feeling lighter and clearer.”</blockquote>
+          <p class="outcome">Outcome: a simple weekly routine that stuck — and less Sunday-night dread.</p>
+        </article>
+        <article class="review-card">
+          <span class="sample-tag">Sample review</span>
+          <div class="review-top"><div class="avatar av-teal" aria-hidden="true">AR</div><div><strong>Alexandra R.</strong><span>Money habits</span></div></div>
+          <div class="stars" role="img" aria-label="Rated 5 out of 5 stars">★★★★★</div>
+          <blockquote>“The free call alone helped me sort out my money habits. No pressure to sign up — just genuinely helpful.”</blockquote>
+          <p class="outcome">Outcome: a spending plan she could keep, and the first savings she had in years.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+  <section id="programs" aria-labelledby="services-heading">
+    <div class="wrap">
+      <span class="eyebrow">How I can help</span>
+      <h2 id="services-heading">Support that fits where you are</h2>
+      <p class="sub">Start free, then choose only what you need. Everything is one-to-one and private.</p>
+      <div class="services-grid">
+        <article class="service-card">
+          <div class="service-icon icon-indigo" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" aria-label="Phone icon"><path d="M5 4h4l2 5-2.5 1.5a12 12 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z" stroke="#4F46E5" stroke-width="1.8" stroke-linejoin="round"/></svg></div>
+          <h3>Free discovery call</h3><p>A relaxed 30-minute chat. Tell me what's on your mind, ask anything, and see if coaching feels right for you.</p><p class="for"><strong>Best for:</strong> anyone who is curious but not sure where to start.</p>
+        </article>
+        <article class="service-card">
+          <div class="service-icon icon-coral" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" aria-label="Two people icon"><circle cx="9" cy="8" r="3.5" stroke="#E11D48" stroke-width="1.8"/><path d="M3.5 20c.8-3.2 2.8-5 5.5-5s4.7 1.8 5.5 5" stroke="#E11D48" stroke-width="1.8" stroke-linecap="round"/><circle cx="17" cy="9" r="2.5" stroke="#E11D48" stroke-width="1.8"/><path d="M16 15.2c2.3.3 3.9 1.8 4.5 4.3" stroke="#E11D48" stroke-width="1.8" stroke-linecap="round"/></svg></div>
+          <h3>1-to-1 coaching</h3><p>Private weekly sessions focused entirely on you — your goals, your blocks, and your next step.</p><p class="for"><strong>Best for:</strong> a decision you keep putting off, or a goal that needs steady support.</p>
+        </article>
+        <article class="service-card">
+          <div class="service-icon icon-indigo" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" aria-label="Compass icon"><circle cx="12" cy="12" r="9" stroke="#4F46E5" stroke-width="1.8"/><path d="M15.5 8.5l-2 5-5 2 2-5 5-2z" stroke="#4F46E5" stroke-width="1.8" stroke-linejoin="round"/></svg></div>
+          <h3>Career clarity</h3><p>Stay, change, or start something new? We map your options honestly so you can choose with confidence.</p><p class="for"><strong>Best for:</strong> feeling stuck at work, or thinking about a career change.</p>
+        </article>
+        <article class="service-card">
+          <div class="service-icon icon-coral" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" aria-label="Wallet icon"><rect x="3" y="6" width="18" height="14" rx="3" stroke="#E11D48" stroke-width="1.8"/><path d="M3 10h18M16 15h2" stroke="#E11D48" stroke-width="1.8" stroke-linecap="round"/></svg></div>
+          <h3>Money habits</h3><p>Simple, shame-free ways to feel in control of your money — spending, saving, and planning ahead.</p><p class="for"><strong>Best for:</strong> money stress, or wanting a plan that actually fits your life.</p>
+        </article>
+        <article class="service-card">
+          <div class="service-icon icon-indigo" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" aria-label="Calendar icon"><rect x="3" y="5" width="18" height="16" rx="3" stroke="#4F46E5" stroke-width="1.8"/><path d="M8 3v4M16 3v4M3 10h18M9 15l2 2 4-4" stroke="#4F46E5" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <h3>6-week reset plan</h3><p>A structured six weeks to rebuild momentum — weekly sessions, small doable actions, and steady support.</p><p class="for"><strong>Best for:</strong> a fresh start after a setback, or a big change you want to make stick.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+  <section id="about" class="about" aria-labelledby="about-heading">
+    <div class="wrap about-grid">
+      <div>
+        <span class="eyebrow">Meet your coach</span>
+        <h2 id="about-heading">Hi, I'm Sam — and I get it</h2>
+        <div class="coach-row"><div class="avatar" style="background:linear-gradient(135deg,#4F46E5,#FB7185)" aria-hidden="true">SR</div><div><strong>Sam Rivera</strong><span>North Star Coaching · Springfield</span></div></div>
+        <p>Most people I talk to aren't stuck because they're lazy. They're stuck because everything feels tangled — work, money, family, and what comes next, all at once. My job is to help you pull one clear thread, and follow it.</p>
+        <p style="margin-top:12px">For ten years I have worked one-to-one with more than 200 clients, helping them make career changes, rebuild money habits, and get moving again after a tough stretch. No jargon, no lectures — just honest conversations and one clear next step at a time.</p>
+        <ul><li>Plain, honest conversations — no jargon, no lectures</li><li>Online or in person, evenings and weekends available</li><li>You leave every session with one clear next step</li></ul>
+      </div>
+      <img src="https://images.unsplash.com/photo-1543269865-cbf427effbad?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Two people talking warmly over a laptop, a friendly coaching conversation" loading="lazy">
+    </div>
+  </section>
+  <section aria-labelledby="trust-heading">
+    <div class="wrap trust-band">
+      <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="A warm handshake, a sign of trust and a new agreement" loading="lazy">
+      <div>
+        <span class="eyebrow">Why it works</span>
+        <h2 id="trust-heading">A safe place to think out loud</h2>
+        <blockquote>“You don't need to have it all figured out before you call. You just need to be honest about where you are.”</blockquote>
+        <p style="margin-top:14px;color:var(--muted)">Everything you share stays between us. The free call is a real conversation, not a sales pitch — and if coaching isn't the right fit, I'll say so.</p>
+      </div>
+    </div>
+  </section>
+  <section class="how" aria-labelledby="how-heading">
+    <div class="wrap">
+      <span class="eyebrow" style="background:rgba(255,255,255,.12);color:#FDE68A">Simple by design</span>
+      <h2 id="how-heading">How it works</h2>
+      <p class="sub">No forms that go nowhere. No waiting weeks. Three easy steps.</p>
+      <div class="steps">
+        <div class="step"><div class="step-num" aria-hidden="true">1</div><h3>Book a free call</h3><p>Pick a time that suits you using the form below or by phone. It takes less than a minute.</p></div>
+        <div class="step"><div class="step-num" aria-hidden="true">2</div><h3>Talk it through</h3><p>We meet online or in person for 30 minutes. You talk, I listen, and we untangle what's really going on.</p></div>
+        <div class="step"><div class="step-num" aria-hidden="true">3</div><h3>Leave with a plan</h3><p>You walk away with one clear, doable next step — whether or not we work together again.</p></div>
+      </div>
+    </div>
+  </section>
+  <section id="pricing" aria-labelledby="prices-heading">
+    <div class="wrap">
+      <span class="eyebrow">Clear, honest prices</span>
+      <h2 id="prices-heading">Simple pricing, no surprises</h2>
+      <p class="sub">Start free. Pay only if coaching feels right for you.</p>
+      <div class="price-grid">
+        <div class="price-card">
+          <h3>Free call</h3><div class="price-amount">$0 <small>/ 30 min</small></div><p>A relaxed first conversation.</p>
+          <ul><li>30-minute video or phone call</li><li>Talk through what's on your mind</li><li>One clear next step to take away</li><li>No obligation to continue</li></ul>
+          <a class="btn btn-outline" style="border-color:var(--indigo);color:var(--indigo)" href="#contact">Book my free call</a>
+        </div>
+        <div class="price-card featured">
+          <span class="price-badge">Most popular</span>
+          <h3>Single session</h3><div class="price-amount">$95 <small>/ session</small></div><p>One focused hour, just for you.</p>
+          <ul><li>60-minute 1-to-1 session</li><li>Online or in person</li><li>Written summary after the session</li><li>Book when you need it</li></ul>
+          <a class="btn btn-indigo" href="#contact">Book a session</a>
+        </div>
+        <div class="price-card">
+          <h3>6-week plan</h3><div class="price-amount">$495 <small>/ 6 weeks</small></div><p>Steady support to build momentum.</p>
+          <ul><li>Six weekly 60-minute sessions</li><li>Personal action plan between sessions</li><li>Email support throughout</li><li>Progress review at the end</li></ul>
+          <a class="btn btn-outline" style="border-color:var(--indigo);color:var(--indigo)" href="#contact">Start my 6 weeks</a>
+        </div>
+      </div>
+      <p class="price-note">Sample prices shown for this sample design. Payment details are agreed on the free call.</p>
+    </div>
+  </section>
+  <section id="faq" class="faq" aria-labelledby="faq-heading">
+    <div class="wrap">
+      <span class="eyebrow">Good questions</span>
+      <h2 id="faq-heading">Frequently asked questions</h2>
+      <p class="sub">Anything else on your mind? Ask it on the free call — there are no silly questions here.</p>
+      <div class="faq-list">
+        <div class="faq-item"><button type="button" aria-expanded="false">What happens on the free call? <span class="chev" aria-hidden="true">+</span></button><div class="faq-answer">We spend 30 minutes talking about what's on your mind. I'll ask a few questions, share honest thoughts, and help you see one clear next step. There's no pressure to book anything afterwards.</div></div>
+        <div class="faq-item"><button type="button" aria-expanded="false">Is coaching like therapy? <span class="chev" aria-hidden="true">+</span></button><div class="faq-answer">No. Therapy often looks back to heal the past; coaching looks forward to help you decide and act. If something comes up that needs a therapist, I'll say so honestly and help you find one.</div></div>
+        <div class="faq-item"><button type="button" aria-expanded="false">How long does it take? <span class="chev" aria-hidden="true">+</span></button><div class="faq-answer">Some people get what they need from one free call or a single session. Others prefer the 6-week plan for steady change. There's no minimum commitment — you decide after we talk.</div></div>
+        <div class="faq-item"><button type="button" aria-expanded="false">Can we meet online? <span class="chev" aria-hidden="true">+</span></button><div class="faq-answer">Yes. Most sessions happen by video call, so you can join from anywhere. If you're in Springfield, we can also meet in person — just ask when you book.</div></div>
+        <div class="faq-item"><button type="button" aria-expanded="false">What if it's not for me? <span class="chev" aria-hidden="true">+</span></button><div class="faq-answer">That's completely fine. The free call costs nothing, and you can stop at any time — even after the first paid session. If coaching isn't the right fit, I'll tell you honestly.</div></div>
+      </div>
+    </div>
+  </section>
+  <section id="contact" aria-labelledby="contact-heading">
+    <div class="wrap">
+      <span class="eyebrow">Say hello</span>
+      <h2 id="contact-heading">Book your free call</h2>
+      <p class="sub">Fill in the form or call directly. I usually reply within one working day.</p>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h3>Coach Sam Rivera</h3>
+          <p><strong>Phone:</strong> <a href="tel:+15550146640">(555) 014-6640</a></p>
+          <p><strong>Where:</strong> Online, and in person in Springfield</p>
+          <p><strong>Hours:</strong> Monday to Friday, 9:00 AM – 6:00 PM · Saturday by appointment</p>
+          <p>Prefer to talk first? Call any weekday — if I miss you, leave a message and I'll call back the same day.</p>
+          <div class="map-placeholder" role="img" aria-label="Map placeholder showing Springfield area"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s-7-5.5-7-11a7 7 0 1114 0c0 5.5-7 11-7 11z" stroke="#4F46E5" stroke-width="1.8"/><circle cx="12" cy="10" r="2.5" stroke="#4F46E5" stroke-width="1.8"/></svg><strong>Map placeholder</strong><span>Online sessions worldwide · In person in Springfield</span></div>
+        </div>
+        <form id="contact-form" action="#" method="post" novalidate>
+          <h3>Request your free call</h3>
+          <p>Fill this in and I'll be in touch to confirm a time.</p>
+          <div class="field"><label for="name">Name</label><input type="text" id="name" name="name" autocomplete="name" required></div>
+          <div class="field"><label for="email">Email</label><input type="email" id="email" name="email" autocomplete="email" required></div>
+          <div class="field"><label for="phone">Phone</label><input type="tel" id="phone" name="phone" autocomplete="tel"></div>
+          <div class="field"><label for="message">What do you want help with?</label><textarea id="message" name="message" required></textarea></div>
+          <div class="field"><label for="day">Preferred day</label><select id="day" name="day"><option>Monday</option><option>Tuesday</option><option>Wednesday</option><option>Thursday</option><option>Friday</option><option>Saturday morning</option><option>Evening — any weekday</option></select></div>
+          <button class="btn btn-primary" type="submit">Request my free call</button>
+          <p class="form-msg" id="form-msg" role="status">Thanks — this is a sample form, no message was sent.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div><strong>North Star Coaching</strong>Coach Sam Rivera · Online + Springfield<br>Phone: <a href="tel:+15550146640">(555) 014-6640</a>
+      <p class="sample-footer">Sample design — not a real coach. All names, reviews, prices and details on this page are fictional samples for demonstration only.</p>
+      <p class="sample-footer">Photos: Unsplash</p>
+    </div>
+    <div><a href="#top">Back to top ↑</a></div>
+  </div>
+</footer>
+<a class="sticky-call" href="tel:+15550146640" aria-label="Call North Star Coaching now">📞 Call now</a>
+<script>
+document.querySelectorAll('.faq-item button').forEach(function(btn){
+  btn.addEventListener('click',function(){
+    var item=btn.closest('.faq-item'),isOpen=item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(function(el){el.classList.remove('open');el.querySelector('button').setAttribute('aria-expanded','false')});
+    if(!isOpen){item.classList.add('open');btn.setAttribute('aria-expanded','true')}
+  });
+});
+document.getElementById('contact-form').addEventListener('submit',function(e){e.preventDefault();document.getElementById('form-msg').style.display='block'});
+</script>
+</body>
+</html>

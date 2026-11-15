@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>IronPeak Fitness — Stronger Every Single Week | Sample Design</title>
+<meta name="description" content="IronPeak Fitness sample landing page: coached workouts, group classes, personal training and recovery. Get a free trial pass. Sample design — not a real gym.">
+<style>
+*{box-sizing:border-box}
+:root{--ink:#111827;--orange:#F97316;--orange-dark:#EA580C;--light:#F9FAFB;--grey:#6B7280;--line:#E5E7EB}
+body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;color:var(--ink);background:#fff;font-size:17px;line-height:1.6}
+img{max-width:100%;display:block}
+a{color:var(--orange-dark)}
+h1,h2,h3{line-height:1.15;margin:0}
+.kicker{font-size:13px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--orange)}
+h2{font-size:30px;font-weight:900;letter-spacing:-.01em;text-transform:uppercase}
+h2 span{color:var(--orange)}
+section{padding:56px 20px}
+.wrap{max-width:1080px;margin:0 auto}
+.lead{color:#374151;max-width:640px;font-size:18px}
+.topbar{background:var(--orange);color:#fff;text-align:center;font-weight:700;font-size:14px;padding:10px 16px}
+header.site{position:sticky;top:0;z-index:20;background:rgba(17,24,39,.97);color:#fff}
+.header-in{max-width:1080px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;gap:16px;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:#fff;font-weight:900;font-size:20px;letter-spacing:.02em;text-transform:uppercase}
+.brand svg{flex:none}
+.brand em{font-style:normal;color:var(--orange)}
+nav{display:none;gap:22px}
+nav a{color:#E5E7EB;text-decoration:none;font-weight:600;font-size:15px}
+nav a:hover{color:#fff}
+.btn{display:inline-block;background:var(--orange);color:#fff;text-decoration:none;font-weight:800;padding:14px 22px;border-radius:12px;min-height:52px;line-height:1.2;text-align:center;border:2px solid var(--orange)}
+.btn:hover{background:var(--orange-dark);border-color:var(--orange-dark)}
+.btn-ghost{background:transparent;color:#fff;border:2px solid #fff}
+.btn-ghost:hover{background:#fff;color:var(--ink)}
+.btn-dark{background:var(--ink);border-color:var(--ink)}
+.badge{display:inline-block;background:#FEF3C7;color:#92400E;border:1px solid #FDE68A;font-size:12px;font-weight:800;padding:4px 10px;border-radius:999px;letter-spacing:.04em}
+.badge-dark{background:#1F2937;color:#FDBA74;border-color:#374151}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid #F59E0B;outline-offset:3px}
+.hero{padding:0;position:relative;background:var(--ink);color:#fff}
+.hero img.hero-photo{width:100%;height:520px;object-fit:cover;object-position:center}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(17,24,39,.72) 0%,rgba(17,24,39,.55) 45%,rgba(17,24,39,.92) 100%);display:flex;align-items:flex-end}
+.hero-in{max-width:1080px;margin:0 auto;padding:36px 20px 44px;width:100%}
+.hero h1{font-size:44px;font-weight:900;text-transform:uppercase;letter-spacing:-.01em;max-width:640px}
+.hero h1 em{font-style:normal;color:var(--orange)}
+.hero p{font-size:19px;color:#F3F4F6;max-width:580px;margin:14px 0 22px}
+.hero-cta{display:flex;flex-wrap:wrap;gap:12px}
+.hero-trust{margin-top:20px;font-size:15px;color:#E5E7EB;display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.stars{color:#FBBF24;letter-spacing:2px}
+.stats{background:var(--ink);color:#fff;padding:28px 20px}
+.stats-grid{max-width:1080px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:20px;text-align:center}
+.stat b{display:block;font-size:32px;font-weight:900;color:var(--orange)}
+.stat span{font-size:14px;color:#D1D5DB}
+.reviews{background:var(--light)}
+.grid{display:grid;gap:16px;margin-top:24px}
+.card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px}
+.review-top{display:flex;gap:12px;align-items:center;margin-bottom:12px}
+.avatar{width:48px;height:48px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:900;font-size:19px;flex:none}
+.av1{background:#F97316}.av2{background:#111827}.av3{background:#059669}
+.review-top b{display:block}
+.review-top small{color:var(--grey)}
+.sample-tag{font-size:12px;font-weight:800;color:#92400E;background:#FEF3C7;padding:3px 8px;border-radius:999px;display:inline-block;margin-top:8px}
+.service-card{overflow:hidden;padding:0}
+.service-card img{width:100%;height:190px;object-fit:cover}
+.service-body{padding:20px}
+.service-body h3{font-size:20px;font-weight:900;text-transform:uppercase}
+.service-body p{color:#4B5563;margin:8px 0 0}
+.icon{width:44px;height:44px;border-radius:12px;background:#FFF7ED;color:var(--orange-dark);display:flex;align-items:center;justify-content:center;margin-bottom:12px}
+.service-photo-note{font-size:13px;color:var(--grey);margin-top:24px}
+.timetable{background:var(--ink);color:#fff}
+.timetable h2{color:#fff}
+.table-wrap{overflow-x:auto;margin-top:24px;background:#1F2937;border-radius:16px;padding:8px}
+table{width:100%;border-collapse:collapse;min-width:640px}
+th,td{padding:13px 12px;text-align:left;font-size:15px;border-bottom:1px solid #374151}
+th{color:#FDBA74;text-transform:uppercase;letter-spacing:.06em;font-size:13px}
+td b{color:#fff}
+.timetable p{color:#D1D5DB;font-size:14px}
+.step{display:flex;gap:16px;align-items:flex-start}
+.step-num{width:52px;height:52px;border-radius:50%;background:var(--orange);color:#fff;font-weight:900;font-size:22px;display:flex;align-items:center;justify-content:center;flex:none}
+.step h3{font-size:19px;font-weight:900;text-transform:uppercase;margin-top:12px}
+.step p{color:#4B5563;margin:6px 0 0}
+.pricing{background:var(--light)}
+.price-card{text-align:center}
+.price-card.featured{border:2px solid var(--orange)}
+.price{font-size:44px;font-weight:900;line-height:1;margin:12px 0 4px}
+.price small{font-size:16px;color:var(--grey);font-weight:600}
+.price-card ul{list-style:none;padding:0;margin:16px 0;text-align:left;color:#374151}
+.price-card li{padding:7px 0;border-bottom:1px solid #F3F4F6}
+.price-card li::before{content:"✓ ";color:#059669;font-weight:800}
+.hours{margin-top:20px;background:#fff;border:1px solid var(--line);border-radius:16px;padding:20px}
+.hours h3{font-size:18px}
+.hours dl{display:grid;grid-template-columns:1fr auto;gap:6px 16px;margin:12px 0 0}
+.hours dt{color:#4B5563}.hours dd{margin:0;font-weight:700}
+.faq-item{border:1px solid var(--line);border-radius:14px;margin-bottom:12px;overflow:hidden;background:#fff}
+.faq-q{width:100%;text-align:left;background:#fff;border:0;padding:18px;font-size:17px;font-weight:800;color:var(--ink);cursor:pointer;display:flex;justify-content:space-between;gap:12px;align-items:center}
+.faq-a{display:none;padding:0 18px 18px;color:#4B5563}
+.faq-item.open .faq-a{display:block}
+.contact-grid{display:grid;gap:24px}
+.map-ph{height:180px;border-radius:16px;background:#E5E7EB;display:flex;align-items:center;justify-content:center;color:#6B7280;font-weight:700;text-align:center;padding:20px;border:1px dashed #9CA3AF}
+form label{display:block;font-weight:700;margin:14px 0 6px}
+form input,form select,form textarea{width:100%;padding:13px 14px;border:1px solid #D1D5DB;border-radius:10px;font-size:16px;font-family:inherit}
+.form-msg{margin-top:14px;font-weight:700;color:#065F46;display:none}
+.contact-info p{margin:6px 0}
+.sticky-call{position:fixed;left:12px;right:12px;bottom:12px;z-index:30;background:#16A34A;color:#fff;text-align:center;text-decoration:none;font-weight:900;padding:15px;border-radius:14px;box-shadow:0 8px 24px rgba(0,0,0,.25)}
+footer{background:var(--ink);color:#D1D5DB;padding:32px 20px 96px;font-size:14px}
+footer .wrap{display:grid;gap:12px}
+footer a{color:#FDBA74}
+@media(min-width:700px){
+  nav{display:flex}
+  .hero h1{font-size:60px}
+  .hero img.hero-photo{height:600px}
+  .stats-grid{grid-template-columns:repeat(4,1fr)}
+  .grid{grid-template-columns:1fr 1fr}
+  .grid-3{grid-template-columns:repeat(3,1fr)}
+  .contact-grid{grid-template-columns:1fr 1fr}
+  .sticky-call{display:none}
+}
+@media(min-width:1000px){
+  h2{font-size:36px}
+  .grid{grid-template-columns:repeat(3,1fr)}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">First month $99 for new members &nbsp;•&nbsp; No joining fee this month <span>(sample offer)</span></div>
+
+<header class="site">
+  <div class="header-in">
+    <a class="brand" href="#top" aria-label="IronPeak Fitness home">
+      <svg width="34" height="34" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="1" y="9" width="3" height="6" rx="1" fill="#F97316"/><rect x="4.5" y="7" width="3" height="10" rx="1" fill="#fff"/><rect x="9" y="10.5" width="6" height="3" rx="1" fill="#F97316"/><rect x="16.5" y="7" width="3" height="10" rx="1" fill="#fff"/><rect x="20" y="9" width="3" height="6" rx="1" fill="#F97316"/></svg>
+      Iron<em>Peak</em> Fitness
+    </a>
+    <nav aria-label="Main navigation">
+      <a href="#training">Training</a>
+      <a href="#timetable">Classes</a>
+      <a href="#prices">Prices</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div style="display:flex;gap:10px;align-items:center">
+      <span class="badge">Sample design</span>
+      <a class="btn" href="#contact" style="padding:11px 16px;min-height:44px">Join now</a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero" aria-label="Introduction">
+  <img class="hero-photo" src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Bright modern gym interior with rows of strength equipment and free weights" fetchpriority="high">
+  <div class="hero-overlay">
+    <div class="hero-in">
+      <p class="kicker">Austin Hill Country • Since 2019</p>
+      <h1>Stronger <em>every single week</em></h1>
+      <p>Coached workouts, real equipment, no crowds at peak time.</p>
+      <div class="hero-cta">
+        <a class="btn" href="#contact">Get a free trial pass</a>
+        <a class="btn btn-ghost" href="#timetable">See classes</a>
+      </div>
+      <p class="hero-trust"><span class="stars" aria-label="4.9 out of 5 stars">★★★★★</span> 4.9 sample rating &nbsp;•&nbsp; Free trial, no card needed &nbsp;•&nbsp; <span class="badge-dark badge">Sample design</span></p>
+    </div>
+  </div>
+</section>
+
+<section class="stats" aria-label="Gym at a glance">
+  <div class="stats-grid">
+    <div class="stat"><b>40+</b><span>classes every week</span></div>
+    <div class="stat"><b>12</b><span>expert coaches</span></div>
+    <div class="stat"><b>6am–10pm</b><span>open weekdays</span></div>
+    <div class="stat"><b>4.9★</b><span>sample rating</span></div>
+  </div>
+</section>
+
+<section class="reviews" aria-label="Member reviews">
+  <div class="wrap">
+    <p class="kicker">Real results, real people</p>
+    <h2>Members who <span>stuck with it</span></h2>
+    <p class="lead">No quick fixes. Just a plan, a coach who knows your name, and a room that pushes you.</p>
+    <div class="grid grid-3">
+      <article class="card">
+        <div class="review-top"><span class="avatar av1" aria-hidden="true">M</span><div><b>Maya R.</b><small>Member for 2 years</small></div></div>
+        <p><span class="stars" aria-label="5 out of 5 stars">★★★★★</span></p>
+        <p>“I’d never lifted before. My coach built my plan week by week — I’m stronger at 41 than I was at 25.”</p>
+        <span class="sample-tag">Sample review</span>
+      </article>
+      <article class="card">
+        <div class="review-top"><span class="avatar av2" aria-hidden="true">J</span><div><b>Jordan T.</b><small>Group classes</small></div></div>
+        <p><span class="stars" aria-label="5 out of 5 stars">★★★★★</span></p>
+        <p>“The 6am class is the best part of my day. Small groups, everyone knows each other, no waiting for equipment.”</p>
+        <span class="sample-tag">Sample review</span>
+      </article>
+      <article class="card">
+        <div class="review-top"><span class="avatar av3" aria-hidden="true">S</span><div><b>Sam K.</b><small>Personal training</small></div></div>
+        <p><span class="stars" aria-label="5 out of 5 stars">★★★★★</span></p>
+        <p>“I came for a free pass and stayed. The coaches actually watch your form — that’s what kept me injury-free.”</p>
+        <span class="sample-tag">Sample review</span>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="training" aria-label="Training and services">
+  <div class="wrap">
+    <p class="kicker">Train your way</p>
+    <h2>Everything you need, <span>under one roof</span></h2>
+    <p class="lead">Pick one, or mix them. Every membership includes open gym and a starter plan with a coach.</p>
+    <div class="grid">
+      <article class="card service-card">
+        <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Woman training with dumbbells in a gym" loading="lazy">
+        <div class="service-body">
+          <div class="icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect x="1" y="9" width="3" height="6" rx="1" fill="currentColor"/><rect x="5" y="7" width="3" height="10" rx="1" fill="currentColor"/><rect x="9" y="10.5" width="6" height="3" rx="1" fill="currentColor"/><rect x="16" y="7" width="3" height="10" rx="1" fill="currentColor"/><rect x="20" y="9" width="3" height="6" rx="1" fill="currentColor"/></svg></div>
+          <h3>Strength coaching</h3>
+          <p>Barbell, dumbbell and machine work with a coach checking your form every set.</p>
+        </div>
+      </article>
+      <article class="card service-card">
+        <img src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Athlete training hard in a dark moody gym" loading="lazy">
+        <div class="service-body">
+          <div class="icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/><path d="M12 7v5l3 3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
+          <h3>Group classes</h3>
+          <p>HIIT, strength, yoga and mobility — 40+ classes a week, capped at 16 people so you’re never lost in a crowd.</p>
+        </div>
+      </article>
+      <article class="card service-card">
+        <div class="service-body">
+          <div class="icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="2"/><path d="M4 21c1-4 4-6 8-6s7 2 8 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
+          <h3>Personal training</h3>
+          <p>One-to-one sessions, a plan built around your body and your goal, and check-ins every month.</p>
+        </div>
+      </article>
+      <article class="card service-card">
+        <div class="service-body">
+          <div class="icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M3 20h18M5 20V8l7-5 7 5v12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <h3>Open gym</h3>
+          <p>Full racks, platforms, cardio and free weights — train on your own time, 5am to 10pm on weekdays.</p>
+        </div>
+      </article>
+      <article class="card service-card">
+        <div class="service-body">
+          <div class="icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 3c3 4 6 6 6 10a6 6 0 1 1-12 0c0-4 3-6 6-10z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></div>
+          <h3>Nutrition starter plan</h3>
+          <p>Simple eating habits that fit real life — no crash diets, no banned foods, just a plan you can keep.</p>
+        </div>
+      </article>
+      <article class="card service-card">
+        <div class="service-body">
+          <div class="icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 3v18M5 8l7-5 7 5M5 16l7 5 7-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <h3>Recovery room</h3>
+          <p>Sauna and cold plunge after training, plus stretching space — recover properly so you can train again tomorrow.</p>
+        </div>
+      </article>
+    </div>
+    <p class="service-photo-note">Photos: Unsplash. Training photos show real gym training — this is a sample design, not a real gym.</p>
+  </div>
+</section>
+
+<section class="timetable" id="timetable" aria-label="Class timetable">
+  <div class="wrap">
+    <p class="kicker">This week at IronPeak</p>
+    <h2>Class <span>timetable</span></h2>
+    <p>Sample timetable — class times change, check with the gym before you visit.</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th scope="col">Day</th><th scope="col">6:00am</th><th scope="col">12:00pm</th><th scope="col">6:00pm</th></tr></thead>
+        <tbody>
+          <tr><td><b>Monday</b></td><td>Strength</td><td>HIIT</td><td>Yoga</td></tr>
+          <tr><td><b>Tuesday</b></td><td>HIIT</td><td>Strength</td><td>Boxing basics</td></tr>
+          <tr><td><b>Wednesday</b></td><td>Strength</td><td>Mobility</td><td>Yoga</td></tr>
+          <tr><td><b>Thursday</b></td><td>HIIT</td><td>Strength</td><td>Core &amp; conditioning</td></tr>
+          <tr><td><b>Friday</b></td><td>Strength</td><td>HIIT</td><td>Open mat</td></tr>
+          <tr><td><b>Saturday</b></td><td>Team workout</td><td>Yoga</td><td>—</td></tr>
+          <tr><td><b>Sunday</b></td><td>Stretch &amp; reset</td><td>—</td><td>—</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section aria-label="How it works">
+  <div class="wrap">
+    <p class="kicker">Start in 3 steps</p>
+    <h2>Your first week, <span>made simple</span></h2>
+    <div class="grid grid-3" style="margin-top:24px">
+      <div class="step"><span class="step-num" aria-hidden="true">1</span><div><h3>Claim your free pass</h3><p>Fill in the form below. No card, no pressure — just 3 free sessions to try us out.</p></div></div>
+      <div class="step"><span class="step-num" aria-hidden="true">2</span><div><h3>Meet a coach</h3><p>A 30-minute chat and a movement check. We learn your goal, your injuries, and your schedule.</p></div></div>
+      <div class="step"><span class="step-num" aria-hidden="true">3</span><div><h3>Train your plan</h3><p>Leave with a written plan for your first 4 weeks — classes, strength days, and rest days included.</p></div></div>
+    </div>
+    <p style="margin-top:28px"><a class="btn" href="#contact">Get a free trial pass</a></p>
+  </div>
+</section>
+
+<section class="pricing" id="prices" aria-label="Membership prices and opening hours">
+  <div class="wrap">
+    <p class="kicker">No hidden fees</p>
+    <h2>Simple <span>prices</span></h2>
+    <p class="lead">Sample prices — for demonstration only.</p>
+    <div class="grid grid-3" style="margin-top:24px">
+      <article class="card price-card"><h3>Day pass</h3><p class="price">$15<small> / day</small></p><p>Try the gym for a day</p><ul><li>Full open gym access</li><li>One group class</li><li>Locker &amp; showers</li></ul><a class="btn btn-dark" href="#contact">Try a day</a></article>
+      <article class="card price-card featured"><h3>Monthly</h3><p class="price">$49<small> / month</small></p><p>Most popular</p><ul><li>Unlimited open gym</li><li>All group classes</li><li>Recovery room included</li><li>Starter plan with a coach</li></ul><a class="btn" href="#contact">Join monthly</a></article>
+      <article class="card price-card"><h3>Coaching</h3><p class="price">$199<small> / month</small></p><p>Monthly + personal training</p><ul><li>Everything in Monthly</li><li>4 one-to-one sessions</li><li>Nutrition starter plan</li><li>Monthly progress check</li></ul><a class="btn btn-dark" href="#contact">Start coaching</a></article>
+    </div>
+    <div class="hours">
+      <h3>Opening hours</h3>
+      <dl>
+        <dt>Monday – Friday</dt><dd>5:00am – 10:00pm</dd>
+        <dt>Saturday</dt><dd>7:00am – 8:00pm</dd>
+        <dt>Sunday</dt><dd>8:00am – 6:00pm</dd>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<section id="faq" aria-label="Frequently asked questions">
+  <div class="wrap" style="max-width:760px">
+    <p class="kicker">Good to know</p>
+    <h2>Questions, <span>answered</span></h2>
+    <div style="margin-top:24px">
+      <div class="faq-item"><button class="faq-q" type="button" aria-expanded="false">Do I need experience to join? <span aria-hidden="true">+</span></button><div class="faq-a"><p>No. Most new members have never lifted before. Your first session is a movement check, and your plan starts at your level.</p></div></div>
+      <div class="faq-item"><button class="faq-q" type="button" aria-expanded="false">Is there a joining fee? <span aria-hidden="true">+</span></button><div class="faq-a"><p>Not this month — the sample offer is no joining fee for new members. After that, check with the gym for the current offer.</p></div></div>
+      <div class="faq-item"><button class="faq-q" type="button" aria-expanded="false">Can I freeze my membership? <span aria-hidden="true">+</span></button><div class="faq-a"><p>Yes. You can pause for up to 4 weeks a year for travel, injury or illness — just tell us a week ahead.</p></div></div>
+      <div class="faq-item"><button class="faq-q" type="button" aria-expanded="false">Do you have showers and lockers? <span aria-hidden="true">+</span></button><div class="faq-a"><p>Yes — showers, lockers, changing rooms and towel hire. Bring your own lock or hire one at reception.</p></div></div>
+      <div class="faq-item"><button class="faq-q" type="button" aria-expanded="false">Can I bring a friend? <span aria-hidden="true">+</span></button><div class="faq-a"><p>Yes. Members can bring one guest a month for free, and guests can buy a $15 day pass any time.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" aria-label="Contact and free trial form" style="background:var(--light)">
+  <div class="wrap">
+    <p class="kicker">Come and see it</p>
+    <h2>Claim your <span>free trial pass</span></h2>
+    <p class="lead">Three free sessions, no card needed. We’ll reply within one working day.</p>
+    <div class="contact-grid" style="margin-top:24px">
+      <div class="contact-info">
+        <div class="card">
+          <p><strong>IronPeak Fitness</strong><br>48 Iron Street<br>Springfield</p>
+          <p>Phone: <a href="tel:+15550143310">(555) 014-3310</a><br>Email: hello@ironpeakfitness.example</p>
+          <p>Open: Mon–Fri 5am–10pm, Sat 7am–8pm, Sun 8am–6pm</p>
+        </div>
+        <div class="map-ph" role="img" aria-label="Map placeholder showing 48 Iron Street, Springfield">Map placeholder<br>48 Iron Street, Springfield</div>
+      </div>
+      <form id="trial-form" action="#" method="post" novalidate>
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text" autocomplete="name" required>
+        <label for="phone">Phone</label>
+        <input id="phone" name="phone" type="tel" autocomplete="tel" required>
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" autocomplete="email" required>
+        <label for="goal">Your goal</label>
+        <select id="goal" name="goal">
+          <option>Get stronger</option>
+          <option>Lose weight</option>
+          <option>Build fitness</option>
+          <option>Try group classes</option>
+          <option>Personal training</option>
+        </select>
+        <p style="margin-top:18px"><button class="btn" type="submit" style="width:100%;cursor:pointer">Get my free trial pass</button></p>
+        <p class="form-msg" id="form-msg" role="status">Thanks — this is a sample form, no message was sent.</p>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<a class="sticky-call" href="tel:+15550143310">📞 Call now — (555) 014-3310</a>
+
+<footer>
+  <div class="wrap">
+    <p><strong style="color:#fff">IronPeak Fitness</strong> &nbsp;•&nbsp; 48 Iron Street, Springfield &nbsp;•&nbsp; (555) 014-3310</p>
+    <p><span class="badge">Sample design</span> &nbsp; This is a sample design — not a real gym. Business name, reviews, prices, timetable and contact details are fictional and for demonstration only.</p>
+    <p>Photos: Unsplash.</p>
+    <p>© 2026 IronPeak Fitness (sample). Built by Shaban Digital Growth — sample portfolio page.</p>
+  </div>
+</footer>
+
+<script>
+document.querySelectorAll('.faq-q').forEach(function(btn){
+  btn.addEventListener('click', function(){
+    var item = btn.parentElement;
+    var open = item.classList.toggle('open');
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+});
+document.getElementById('trial-form').addEventListener('submit', function(e){
+  e.preventDefault();
+  document.getElementById('form-msg').style.display = 'block';
+});
+</script>
+</body>
+</html>

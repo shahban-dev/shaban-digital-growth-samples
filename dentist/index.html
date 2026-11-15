@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BrightPath Dental Studio — A calmer visit to the dentist</title>
+<meta name="description" content="BrightPath Dental Studio sample design: gentle check-ups, clear prices, same-week appointments. Book appointment.">
+<style>
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;color:#134e4a;background:#fff;font-size:17px;line-height:1.6}
+h1,h2,h3{font-family:Georgia,"Times New Roman",serif;color:#0f3d3a;line-height:1.2;margin:0 0 10px}
+h2{font-size:30px}h3{font-size:20px}p{margin:0 0 14px;color:#334155}a{color:#0f766e}
+img{max-width:100%;display:block;border-radius:16px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+section{padding:56px 0}.eyebrow{font-size:13px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:#0f766e;margin-bottom:8px}
+.lead{font-size:19px;color:#475569;max-width:640px}
+.btn{display:inline-block;background:#0f766e;color:#fff;text-decoration:none;font-weight:700;padding:14px 24px;border-radius:999px;min-height:48px;border:2px solid #0f766e}
+.btn:hover{background:#0d5c56}.btn.ghost{background:transparent;color:#fff;border-color:#fff}.btn.ghost:hover{background:rgba(255,255,255,.15)}
+.btn.light{background:#fff;color:#0f766e;border-color:#fff}
+:focus-visible{outline:3px solid #f59e0b;outline-offset:3px;border-radius:6px}
+.topbar{background:#0b3b38;color:#ccfbf1;font-size:14px;text-align:center;padding:9px 16px}
+.topbar a{color:#fff;font-weight:700;text-decoration:none}
+header.site{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.97);border-bottom:1px solid #e2e8f0;backdrop-filter:blur(6px)}
+.nav{display:flex;align-items:center;gap:16px;max-width:1080px;margin:0 auto;padding:12px 20px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:#0f3d3a;font-family:Georgia,serif;font-weight:700;font-size:21px;line-height:1.1}
+.brand small{display:block;font-family:system-ui,sans-serif;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#64748b}
+.brand svg{flex:none}
+.navlinks{display:none;gap:22px;margin-left:auto}
+.navlinks a{color:#334155;text-decoration:none;font-weight:600;font-size:15px}
+.nav .btn{margin-left:auto;padding:10px 18px;font-size:15px}
+.badge{display:inline-block;background:#fef3c7;color:#92400e;border:1px solid #fcd34d;font-size:12px;font-weight:800;padding:4px 10px;border-radius:999px;white-space:nowrap}
+@media(min-width:700px){.navlinks{display:flex}.nav .btn{margin-left:0}}
+.hero{position:relative;padding:0;color:#fff;overflow:hidden}
+.hero img{width:100%;height:520px;object-fit:cover;border-radius:0}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(6,50,47,.92) 0%,rgba(6,50,47,.72) 55%,rgba(6,50,47,.25) 100%)}
+.hero-in{position:relative;z-index:2;max-width:1080px;margin:-520px auto 0;padding:64px 20px 48px;min-height:520px;display:flex;flex-direction:column;justify-content:center}
+.hero h1{color:#fff;font-size:42px;max-width:560px}
+.hero p.promise{color:#e0f2f1;font-size:20px;max-width:540px}
+.hero .cta{display:flex;flex-wrap:wrap;gap:12px;margin:22px 0 28px}
+.truststrip{display:flex;flex-wrap:wrap;gap:18px;align-items:center;font-size:15px;color:#e0f2f1;border-top:1px solid rgba(255,255,255,.35);padding-top:18px;max-width:640px}
+.truststrip .stars{color:#fbbf24;letter-spacing:2px}
+.truststrip b{color:#fff}
+@media(min-width:700px){.hero h1{font-size:54px}.hero img{height:580px}.hero-in{margin-top:-580px;min-height:580px}}
+.reviews{background:#f0fdfa}
+.grid3{display:grid;gap:16px;margin-top:24px}
+@media(min-width:700px){.grid3{grid-template-columns:repeat(3,1fr)}}
+.card{background:#fff;border:1px solid #e2e8f0;border-radius:18px;padding:22px;box-shadow:0 6px 24px rgba(15,118,110,.07)}
+.stars{color:#f59e0b;letter-spacing:2px;font-size:18px}
+.avatar{width:48px;height:48px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:18px;flex:none}
+.who{display:flex;gap:12px;align-items:center;margin-top:16px}
+.who b{display:block;color:#0f3d3a}.who span{font-size:14px;color:#64748b}
+.sample-tag{font-size:12px;font-weight:800;color:#92400e;background:#fef3c7;padding:3px 8px;border-radius:999px}
+.serv-grid{display:grid;gap:16px;margin-top:24px}
+@media(min-width:700px){.serv-grid{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1000px){.serv-grid{grid-template-columns:repeat(3,1fr)}}
+.serv{padding:24px}
+.serv .icon{width:52px;height:52px;border-radius:14px;background:#ccfbf1;display:flex;align-items:center;justify-content:center;margin-bottom:14px}
+.serv p{font-size:16px}
+.price{font-weight:800;color:#0f766e}
+.serv-photo{margin-top:24px;position:relative}
+.serv-photo img{width:100%;height:280px;object-fit:cover}
+.serv-photo figcaption{position:absolute;left:16px;bottom:16px;background:#fff;border-radius:12px;padding:10px 14px;font-weight:700;color:#0f3d3a;box-shadow:0 6px 20px rgba(0,0,0,.18);font-size:15px}
+.why{background:#0f766e;color:#fff}
+.why h2,.why p{color:#fff}.why .lead{color:#ccfbf1}
+.why-wrap{display:grid;gap:28px;align-items:center}
+@media(min-width:1000px){.why-wrap{grid-template-columns:1fr 1fr}}
+.why img{height:360px;width:100%;object-fit:cover}
+.ticks{list-style:none;padding:0;margin:22px 0 0;display:grid;gap:14px}
+.ticks li{display:flex;gap:12px;align-items:flex-start}
+.tick{flex:none;width:28px;height:28px;border-radius:50%;background:#14b8a6;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800}
+.steps{display:grid;gap:16px;margin-top:24px}
+@media(min-width:700px){.steps{grid-template-columns:repeat(3,1fr)}}
+.step{position:relative;padding-top:8px}
+.step .num{font-family:Georgia,serif;font-size:44px;color:#99f6e4;font-weight:700;line-height:1}
+.prices{background:#f8fafc}
+.price-wrap{display:grid;gap:16px;margin-top:24px}
+@media(min-width:700px){.price-wrap{grid-template-columns:1.2fr .8fr}}
+table{width:100%;border-collapse:collapse;background:#fff;border-radius:16px;overflow:hidden}
+td,th{padding:14px 18px;text-align:left;border-bottom:1px solid #e2e8f0}
+th{background:#0f766e;color:#fff}
+td:last-child,th:last-child{text-align:right;font-weight:700;color:#0f3d3a}
+.hours{list-style:none;padding:0;margin:0}
+.hours li{display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px solid #e2e8f0}
+.note{font-size:14px;color:#64748b;margin-top:12px}
+details{background:#fff;border:1px solid #e2e8f0;border-radius:14px;padding:16px 18px;margin-bottom:12px}
+summary{cursor:pointer;font-weight:700;color:#0f3d3a;font-size:17px;list-style:none;display:flex;justify-content:space-between;gap:12px}
+summary::-webkit-details-marker{display:none}
+details p{margin:12px 0 0}
+.contact-wrap{display:grid;gap:24px;margin-top:24px}
+@media(min-width:1000px){.contact-wrap{grid-template-columns:.9fr 1.1fr}}
+.map{height:220px;border-radius:16px;background:#ccfbf1;display:flex;align-items:flex-end;padding:12px}
+.map span{background:#fff;padding:8px 12px;border-radius:10px;font-size:14px;font-weight:700}
+form label{display:block;font-weight:700;margin:12px 0 6px;color:#0f3d3a}
+form input,form select,form textarea{width:100%;padding:13px 14px;border:1.5px solid #cbd5e1;border-radius:12px;font:inherit;font-size:16px;background:#fff}
+form input:focus,form select:focus,form textarea:focus{border-color:#0f766e;outline:3px solid #99f6e4}
+.form-msg{display:none;background:#ecfdf5;border:1px solid #6ee7b7;color:#065f46;padding:12px 14px;border-radius:12px;margin-top:14px;font-weight:700}
+footer{background:#0b3b38;color:#cbd5e1;padding:36px 0 110px;font-size:15px}
+footer a{color:#fff}
+.sticky-call{position:fixed;left:12px;right:12px;bottom:12px;z-index:30;background:#0f766e;color:#fff;text-align:center;text-decoration:none;font-weight:800;padding:15px;border-radius:999px;box-shadow:0 8px 24px rgba(0,0,0,.3)}
+@media(min-width:641px){.sticky-call{display:none}}
+</style>
+</head>
+<body>
+
+<div class="topbar">New patients welcome • Same-week appointments • <a href="tel:+15550142200">Call (555) 014-2200</a></div>
+
+<header class="site">
+<div class="nav">
+<a class="brand" href="#top" aria-label="BrightPath Dental Studio home">
+<svg width="40" height="40" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="24" fill="#0f766e"/><path d="M15 14c-2 8 1 12 3 18 1 4 3 6 6 2 1-2 2-5 4-5s3 3 4 5c3 4 5 2 6-2 2-6 5-10 3-18-2-7-9-7-13-1-4-6-11-6-13 1z" fill="#fff"/></svg>
+<span>BrightPath<small>Dental Studio</small></span></a>
+<span class="badge">Sample design</span>
+<nav class="navlinks" aria-label="Main navigation"><a href="#services">Services</a><a href="#why">Why us</a><a href="#prices">Prices</a><a href="#faq">FAQ</a><a href="#contact">Contact</a></nav>
+<a class="btn" href="#contact">Book appointment</a>
+</div>
+</header>
+
+<main id="top">
+<section class="hero" aria-label="Welcome">
+<img src="https://images.unsplash.com/photo-1588776813677-77aaf5595b83?auto=format&fit=crop&w=1200&q=80" alt="Dentist in a mask and gloves treating a smiling patient in a bright modern dental chair" fetchpriority="high">
+<div class="hero-in">
+<p class="eyebrow" style="color:#99f6e4">Gentle dentistry • Springfield</p>
+<h1>A calmer visit to the dentist</h1>
+<p class="promise">Gentle check-ups, clear prices, same-week appointments.</p>
+<div class="cta"><a class="btn light" href="#contact">Book appointment</a><a class="btn ghost" href="tel:+15550142200">Call (555) 014-2200</a></div>
+<div class="truststrip"><span class="stars" aria-label="5 out of 5 stars">★★★★★</span><span><b>Sample reviews</b> from happy patients — see below</span><span>• No-rush 45-minute visits</span></div>
+</div>
+</section>
+
+<section class="reviews" aria-label="Patient reviews">
+<div class="wrap">
+<p class="eyebrow">What patients say</p>
+<h2>Calm, clear, and kind — every visit</h2>
+<p class="lead">Real care, explained in plain words before anything starts. No surprises, no rush.</p>
+<div class="grid3">
+<article class="card"><span class="stars" aria-label="5 stars">★★★★★</span> <span class="sample-tag">Sample review</span><p style="margin-top:12px">“I used to dread the dentist. Here they explained everything first, and the check-up was painless. I finally feel relaxed about coming back.”</p><div class="who"><span class="avatar" style="background:#0f766e" aria-hidden="true">AM</span><div><b>Anna M.</b><span>Check-up &amp; cleaning</span></div></div></article>
+<article class="card"><span class="stars" aria-label="5 stars">★★★★★</span> <span class="sample-tag">Sample review</span><p style="margin-top:12px">“My daughter actually asks when we can go back. The team is so patient with children, and the price was exactly what they quoted.”</p><div class="who"><span class="avatar" style="background:#c2410c" aria-hidden="true">JR</span><div><b>James R.</b><span>Children's dentistry</span></div></div></article>
+<article class="card"><span class="stars" aria-label="5 stars">★★★★★</span> <span class="sample-tag">Sample review</span><p style="margin-top:12px">“Whitening was quick, comfortable, and the result looks natural. Booking online took two minutes — I got an appointment the same week.”</p><div class="who"><span class="avatar" style="background:#4f46e5" aria-hidden="true">PS</span><div><b>Priya S.</b><span>Teeth whitening</span></div></div></article>
+</div>
+</div>
+</section>
+
+<section id="services" aria-label="Services">
+<div class="wrap">
+<p class="eyebrow">Services</p>
+<h2>Everything your smile needs, in one place</h2>
+<p class="lead">From a first check-up to a full smile plan — with clear sample prices before you book.</p>
+<div class="serv-grid">
+<article class="card serv"><div class="icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#0f766e" stroke-width="2" aria-hidden="true"><path d="M12 3l7 3v5c0 5-3.5 9-7 10-3.5-1-7-5-7-10V6l7-3z"/></svg></div><h3>Check-up &amp; cleaning</h3><p>A thorough exam, digital X-rays if needed, and a gentle clean — so small problems stay small.</p><p class="price">from $49</p></article>
+<article class="card serv"><div class="icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#0f766e" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12h8"/></svg></div><h3>Fillings</h3><p>Tooth-coloured fillings that blend in, done in one visit with numbing that actually works.</p><p class="price">from $120</p></article>
+<article class="card serv"><div class="icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#0f766e" stroke-width="2" aria-hidden="true"><path d="M12 3l2 5 5 1-4 4 1 5-4-3-4 3 1-5-4-4 5-1 2-5z"/></svg></div><h3>Teeth whitening</h3><p>Safe, professional whitening for a brighter smile — with honest advice on what shade suits you.</p><p class="price">from $199</p></article>
+<article class="card serv"><div class="icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#0f766e" stroke-width="2" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg></div><h3>Children's dentistry</h3><p>Patient, playful first visits that help children feel safe — and parents feel informed.</p><p class="price">from $49</p></article>
+<article class="card serv"><div class="icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#0f766e" stroke-width="2" aria-hidden="true"><path d="M12 3v10M12 13l-4 8M12 13l4 8M5 7h14"/></svg></div><h3>Emergency care</h3><p>Toothache, chipped tooth, lost filling? Call in the morning — we hold same-day slots for pain.</p><p class="price">from $89</p></article>
+<article class="card serv"><div class="icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#0f766e" stroke-width="2" aria-hidden="true"><path d="M3 12c3-2 6-2 9 0s6 2 9 0M3 17c3-2 6-2 9 0s6 2 9 0"/></svg></div><h3>Clear aligners</h3><p>Straighten teeth discreetly with clear aligners — a 3D plan first, so you see the result before you start.</p><p class="price">from $1,900</p></article>
+</div>
+<figure class="serv-photo"><img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=800&q=80" alt="Bright modern dental clinic with clean treatment chairs and large windows" loading="lazy"><figcaption>Our clinic — bright, calm, and spotless</figcaption></figure>
+</div>
+</section>
+
+<section id="why" class="why" aria-label="Why choose us">
+<div class="wrap why-wrap">
+<div>
+<p class="eyebrow" style="color:#99f6e4">Why BrightPath</p>
+<h2>A clinic built around nervous patients</h2>
+<p class="lead">Most of our new patients tell us they were anxious before their first visit. We designed everything — the pace, the words, the room — to change that.</p>
+<ul class="ticks">
+<li><span class="tick" aria-hidden="true">✓</span><span><b>Sterile, single-use tools</b> — opened in front of you, every time.</span></li>
+<li><span class="tick" aria-hidden="true">✓</span><span><b>Digital X-rays</b> — low-dose, instant, and shown to you on screen.</span></li>
+<li><span class="tick" aria-hidden="true">✓</span><span><b>No-rush 45-minute appointments</b> — time to ask questions, never hurried.</span></li>
+<li><span class="tick" aria-hidden="true">✓</span><span><b>Insurance help</b> — we check your cover and explain costs before treatment.</span></li>
+</ul>
+</div>
+<div><img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=800&q=80" alt="Dentist doing a gentle dental check-up with a dental mirror" loading="lazy"></div>
+</div>
+</section>
+
+<section aria-label="How it works">
+<div class="wrap">
+<p class="eyebrow">How it works</p>
+<h2>Three easy steps</h2>
+<div class="steps">
+<article class="card step"><div class="num">01</div><h3>Book online</h3><p>Pick a day and time that suits you in two minutes — or call us and we will book it for you.</p></article>
+<article class="card step"><div class="num">02</div><h3>Visit &amp; plan</h3><p>We examine, explain in plain words, and agree a plan and price with you before anything starts.</p></article>
+<article class="card step"><div class="num">03</div><h3>Smile &amp; follow-up</h3><p>Treatment, aftercare advice, and a reminder when your next check-up is due.</p></article>
+</div>
+</div>
+</section>
+
+<section id="prices" class="prices" aria-label="Prices and opening hours">
+<div class="wrap">
+<p class="eyebrow">Prices &amp; hours</p>
+<h2>Clear prices, no surprises</h2>
+<div class="price-wrap">
+<div>
+<table><thead><tr><th>Treatment</th><th>Sample price</th></tr></thead><tbody>
+<tr><td>Check-up</td><td>$49</td></tr>
+<tr><td>Cleaning</td><td>$89</td></tr>
+<tr><td>Teeth whitening</td><td>from $199</td></tr>
+<tr><td>Filling</td><td>from $120</td></tr>
+<tr><td>Clear aligners</td><td>from $1,900</td></tr>
+</tbody></table>
+<p class="note">Sample prices — for illustration only. Your dentist confirms the exact price after your check-up.</p>
+</div>
+<div class="card"><h3>Opening hours</h3><ul class="hours"><li><span>Monday – Friday</span><b>8:00 – 6:00</b></li><li><span>Saturday</span><b>9:00 – 2:00</b></li><li><span>Sunday</span><b>Closed</b></li></ul><p class="note">Emergency? Call in the morning — we hold same-day slots for pain.</p><a class="btn" href="#contact">Book appointment</a></div>
+</div>
+</div>
+</section>
+
+<section id="faq" aria-label="Frequently asked questions">
+<div class="wrap" style="max-width:760px">
+<p class="eyebrow">FAQ</p>
+<h2>Questions? Answered.</h2>
+<details><summary>Do you take new patients? <span aria-hidden="true">+</span></summary><p>Yes — new patients are welcome, and we usually have same-week appointments. Book online or call (555) 014-2200.</p></details>
+<details><summary>Will it hurt? <span aria-hidden="true">+</span></summary><p>Most check-ups and cleans are painless. For anything else we numb the area first and go at your pace — tell us if you need a break, any time.</p></details>
+<details><summary>Do you offer payment plans? <span aria-hidden="true">+</span></summary><p>Yes. We explain the full cost before treatment and can split larger treatments into monthly payments. Ask us when you book.</p></details>
+<details><summary>What if I have a dental emergency? <span aria-hidden="true">+</span></summary><p>Call us as early as you can in the morning. We hold same-day slots for toothache, chips, and lost fillings.</p></details>
+<details><summary>Where do I park? <span aria-hidden="true">+</span></summary><p>Free parking is behind the clinic on Maple Street, with step-free access from the car park to reception.</p></details>
+</div>
+</section>
+
+<section id="contact" class="prices" aria-label="Contact and booking">
+<div class="wrap">
+<p class="eyebrow">Book now</p>
+<h2>Book your visit</h2>
+<p class="lead">Tell us a day that suits you — we will confirm by phone. Prefer to talk? Call (555) 014-2200.</p>
+<div class="contact-wrap">
+<div>
+<div class="card"><h3>Visit us</h3><p><b>BrightPath Dental Studio</b><br>12 Maple Street, Springfield<br>Phone: <a href="tel:+15550142200">(555) 014-2200</a><br>Email: hello@brightpath.example</p><p>Mon–Fri 8–6 • Sat 9–2</p></div>
+<div class="map" role="img" aria-label="Map placeholder: BrightPath Dental Studio, 12 Maple Street, Springfield"><span>📍 12 Maple Street, Springfield</span></div>
+</div>
+<form id="bookform" action="#" method="post">
+<label for="name">Your name</label><input id="name" name="name" type="text" autocomplete="name" required>
+<label for="phone">Phone</label><input id="phone" name="phone" type="tel" autocomplete="tel" required>
+<label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" required>
+<label for="date">Preferred date</label><input id="date" name="date" type="date">
+<label for="message">Anything we should know? (optional)</label><textarea id="message" name="message" rows="4" placeholder="e.g. Nervous patient, toothache on the left side…"></textarea>
+<button class="btn" type="submit" style="margin-top:18px;width:100%">Request my appointment</button>
+<p class="form-msg" id="formmsg" role="status">Thanks — this is a sample form, no message was sent.</p>
+</form>
+</div>
+</div>
+</section>
+</main>
+
+<footer>
+<div class="wrap">
+<p><b style="color:#fff">BrightPath Dental Studio</b> — Sample design, not a real practice. All names, reviews, prices and contact details are fictional and for demonstration only.</p>
+<p>Photos: Unsplash. Sample design — built by Shaban Digital Growth as a demonstration.</p>
+<p><a href="#top">Back to top ↑</a></p>
+</div>
+</footer>
+
+<a class="sticky-call" href="tel:+15550142200">📞 Call now — (555) 014-2200</a>
+
+<script>
+document.getElementById('bookform').addEventListener('submit',function(e){e.preventDefault();var m=document.getElementById('formmsg');m.style.display='block';m.focus();});
+</script>
+</body>
+</html>

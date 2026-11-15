@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Olive & Ember Kitchen — seasonal dishes cooked over fire, served family-style. Sample design.">
+<title>Olive &amp; Ember Kitchen — Slow Food, Warm Welcome</title>
+<style>
+:root{--terra:#C2410C;--terra-d:#9A3412;--olive:#65A30D;--olive-d:#4D7C0F;--cream:#FFFBEB;--cream2:#FEF3C7;--ink:#292524;--muted:#57534E;--line:#E7E5E4;--white:#fff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;color:var(--ink);background:var(--cream);font-size:17px;line-height:1.6}
+h1,h2,h3{font-family:Georgia,"Times New Roman",serif;line-height:1.2;color:var(--ink)}
+h2{font-size:28px;margin:0 0 8px}h3{font-size:20px;margin:0 0 6px}
+p{margin:0 0 12px}.lead{color:var(--muted);max-width:640px}
+a{color:var(--terra-d)}
+:focus-visible{outline:3px solid #F59E0B;outline-offset:2px}
+.topbar{background:#292524;color:#FEF3C7;text-align:center;font-size:14px;padding:9px 16px}
+.topbar span{margin:0 6px;white-space:nowrap}
+header.site{position:sticky;top:0;z-index:20;background:rgba(255,251,235,.97);border-bottom:1px solid var(--line)}
+.head-in{max-width:1080px;margin:0 auto;padding:12px 20px;display:flex;align-items:center;gap:14px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);font-family:Georgia,serif;font-size:21px;font-weight:700}
+.brand svg{flex:none}
+nav{margin-left:auto;display:none;gap:18px}
+nav a{text-decoration:none;color:var(--ink);font-weight:600;font-size:15px}
+.badge{display:inline-block;background:#FEF3C7;border:1px solid #F59E0B;color:#92400E;font-size:12px;font-weight:700;padding:3px 9px;border-radius:999px;white-space:nowrap}
+.btn{display:inline-block;background:var(--terra);color:#fff;text-decoration:none;font-weight:700;padding:13px 22px;border-radius:12px;min-height:48px;border:0;cursor:pointer;font-size:16px}
+.btn:hover{background:var(--terra-d)}
+.btn.ghost{background:rgba(255,255,255,.14);color:#fff;border:2px solid #fff}
+.btn.olive{background:var(--olive-d)}
+.wrap{max-width:1080px;margin:0 auto;padding:56px 20px}
+section{scroll-margin-top:80px}
+.hero{position:relative;color:#fff;min-height:520px;display:flex;align-items:flex-end}
+.hero img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero .shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.25),rgba(41,37,36,.78))}
+.hero-in{position:relative;max-width:1080px;margin:0 auto;padding:72px 20px 56px;width:100%}
+.hero h1{color:#fff;font-size:44px;margin:0 0 12px;max-width:620px}
+.hero p{font-size:19px;max-width:600px;color:#FEF3C7}
+.hero .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
+.hero .meta{margin-top:22px;font-size:15px;color:#FDE68A}
+.kicker{color:var(--terra);font-weight:800;letter-spacing:.08em;text-transform:uppercase;font-size:13px;margin-bottom:8px}
+.grid{display:grid;gap:18px;grid-template-columns:1fr}
+.cards{display:grid;gap:16px;grid-template-columns:1fr}
+.card{background:var(--white);border:1px solid var(--line);border-radius:16px;padding:20px;box-shadow:0 4px 16px rgba(41,37,36,.06)}
+.card img{width:100%;height:200px;object-fit:cover;border-radius:12px;display:block;margin-bottom:14px}
+.stars{color:#D97706;letter-spacing:2px}
+.avatar{width:48px;height:48px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:18px;flex:none}
+.av1{background:var(--terra)}.av2{background:var(--olive-d)}.av3{background:#B45309}
+.review-head{display:flex;gap:12px;align-items:center;margin-bottom:10px}
+.review-head b{display:block}.review-head small{color:var(--muted)}
+.sample-tag{font-size:12px;font-weight:700;color:#92400E;background:#FEF3C7;border-radius:999px;padding:2px 8px}
+.menu-head{display:flex;flex-wrap:wrap;gap:12px;align-items:baseline;justify-content:space-between}
+.dish{display:flex;justify-content:space-between;gap:14px}
+.dish b{font-family:Georgia,serif;font-size:18px}
+.price{color:var(--terra);font-weight:800;white-space:nowrap}
+.tag{font-size:12px;font-weight:700;padding:2px 8px;border-radius:999px;background:#ECFCCB;color:#3F6212;margin-left:6px}
+.story{background:#fff;border-radius:20px;overflow:hidden;box-shadow:0 6px 24px rgba(41,37,36,.08)}
+.story img{width:100%;height:260px;object-fit:cover;display:block}
+.story-in{padding:24px}
+.steps{display:grid;gap:16px;grid-template-columns:1fr}
+.step{background:var(--white);border:1px solid var(--line);border-radius:16px;padding:22px}
+.num{width:44px;height:44px;border-radius:50%;background:var(--terra);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:20px;margin-bottom:12px}
+.hours{background:#292524;color:#FEF3C7;border-radius:20px;padding:28px}
+.hours h2{color:#fff}.hours table{width:100%;border-collapse:collapse;margin-top:12px}
+.hours td{padding:10px 0;border-bottom:1px solid rgba(255,255,255,.15)}
+.hours td:last-child{text-align:right;font-weight:700}
+.faq-item{background:var(--white);border:1px solid var(--line);border-radius:12px;margin-bottom:10px;overflow:hidden}
+.faq-item button{width:100%;text-align:left;background:none;border:0;padding:16px 18px;font-size:17px;font-weight:700;cursor:pointer;display:flex;justify-content:space-between;gap:12px}
+.faq-item .a{padding:0 18px 16px;color:var(--muted)}
+.contact{background:var(--white);border-radius:20px;padding:24px;box-shadow:0 6px 24px rgba(41,37,36,.08)}
+.map{height:170px;border-radius:12px;background:var(--cream2);display:flex;align-items:center;justify-content:center;color:var(--muted);text-align:center;padding:16px;margin:14px 0;border:1px dashed #D6D3D1}
+label{display:block;font-weight:700;margin:14px 0 5px}
+input,select,textarea{width:100%;padding:12px;border:1px solid #D6D3D1;border-radius:10px;font:inherit;font-size:16px}
+textarea{min-height:90px}
+.form-ok{display:none;background:#ECFCCB;border:1px solid #A3E635;color:#365314;border-radius:10px;padding:14px;margin-top:16px}
+.sticky-call{position:fixed;left:12px;right:12px;bottom:12px;z-index:30;display:block;text-align:center;background:var(--terra);color:#fff;font-weight:800;text-decoration:none;padding:15px;border-radius:12px;box-shadow:0 6px 20px rgba(0,0,0,.3)}
+footer{background:#292524;color:#D6D3D1;padding:32px 20px 96px;text-align:center;font-size:14px}
+footer a{color:#FDE68A}
+@media(min-width:700px){
+ nav{display:flex}.hero h1{font-size:56px}.cards{grid-template-columns:1fr 1fr}.steps{grid-template-columns:repeat(3,1fr)}
+ .story{display:grid;grid-template-columns:1fr 1fr}.story img{height:100%}
+ .grid2{display:grid;grid-template-columns:1.2fr .8fr;gap:24px;align-items:start}
+ .sticky-call{display:none}footer{padding-bottom:32px}
+}
+@media(min-width:1000px){.cards{grid-template-columns:repeat(3,1fr)}}
+</style>
+</head>
+<body>
+<div class="topbar"><span>🔥 Wood-fired kitchen</span>•<span>Open tonight until 10pm</span>•<span>Walk-ins welcome</span></div>
+
+<header class="site">
+<div class="head-in">
+<a class="brand" href="#top" aria-label="Olive and Ember Kitchen home">
+<svg width="34" height="34" viewBox="0 0 34 34" aria-hidden="true"><circle cx="17" cy="17" r="16" fill="#C2410C"/><path d="M17 8c2 4 5 6 5 10a5 5 0 1 1-10 0c0-2 1-3.5 2-5 .5 1.5 1 2 2 2 .3-2.5 0-5 1-7z" fill="#FFFBEB"/><circle cx="13" cy="24" r="1.6" fill="#65A30D"/><circle cx="22" cy="24" r="1.6" fill="#65A30D"/></svg>
+Olive &amp; Ember Kitchen</a>
+<span class="badge">Sample design</span>
+<nav aria-label="Main"><a href="#menu">Menu</a><a href="#story">Our story</a><a href="#hours">Hours</a><a href="#faq">FAQ</a></nav>
+<a class="btn" href="#book" style="margin-left:auto">Reserve a table</a>
+</div>
+</header>
+
+<main id="top">
+<section class="hero" aria-label="Welcome">
+<img class="bg" src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=80" alt="Warm dining room at Olive and Ember Kitchen with wooden tables set for dinner" fetchpriority="high">
+<div class="shade" aria-hidden="true"></div>
+<div class="hero-in">
+<h1>Slow food, warm welcome</h1>
+<p>Seasonal dishes cooked over fire, served family-style in the heart of town.</p>
+<div class="cta"><a class="btn" href="#menu">View menu ↓</a><a class="btn ghost" href="#book">Reserve a table</a></div>
+<p class="meta">★ 4.6 sample rating &nbsp;•&nbsp; Family-owned since 1958 &nbsp;•&nbsp; Wood-fired every day</p>
+</div>
+</section>
+
+<section class="wrap" aria-label="Reviews">
+<p class="kicker">What guests say</p>
+<h2>Tables that turn into regulars</h2>
+<p class="lead">Real warmth, honest cooking, and plates made to share. These are sample reviews for this sample design.</p>
+<div class="cards">
+<article class="card"><div class="review-head"><span class="avatar av1" aria-hidden="true">S</span><div><b>Sarah M.</b><small>Regular since 2023</small></div><span class="sample-tag">Sample review</span></div><p class="stars" aria-label="5 out of 5 stars">★★★★★</p><p>“The roast chicken came out crackling from the fire, and the flatbread was still warm. We stayed two hours and never felt rushed.”</p></article>
+<article class="card"><div class="review-head"><span class="avatar av2" aria-hidden="true">D</span><div><b>Daniel R.</b><small>Sunday roast fan</small></div><span class="sample-tag">Sample review</span></div><p class="stars" aria-label="5 out of 5 stars">★★★★★</p><p>“Sunday roast here is a ritual now. Proper gravy, crisp potatoes, and a table big enough for the whole family.”</p></article>
+<article class="card"><div class="review-head"><span class="avatar av3" aria-hidden="true">P</span><div><b>Priya K.</b><small>First visit</small></div><span class="sample-tag">Sample review</span></div><p class="stars" aria-label="5 out of 5 stars">★★★★★</p><p>“Fresh pasta, a kind welcome, and the seasonal salad was the surprise of the night. We booked again before dessert.”</p></article>
+</div>
+</section>
+
+<section class="wrap" id="menu" aria-label="Menu">
+<div class="menu-head"><div><p class="kicker">Sample menu</p><h2>Cooked over fire, priced for sharing</h2><p class="lead">A short seasonal menu that changes with the market. Prices shown are sample prices.</p></div></div>
+<div class="cards" style="margin-top:20px">
+<article class="card"><img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=800&q=80" alt="Plated fine-dining dish with seasonal vegetables and sauce" loading="lazy"><div class="dish"><b>Fresh pasta</b><span class="price">$22</span></div><p>Hand-rolled daily, with sage butter and aged parmesan. <span class="tag">V</span></p></article>
+<article class="card"><div class="dish"><b>Wood-fired flatbread</b><span class="price">$14</span></div><p>Blistered in the oven, topped with olive oil, herbs and soft cheese. <span class="tag">V</span></p><p class="dish"><b>Roast chicken</b><span class="price">$24</span></p><p>Fire-roasted, lemon and thyme, with pan juices and roast potatoes. <span class="tag">GF</span></p></article>
+<article class="card"><div class="dish"><b>Seasonal salad</b><span class="price">$16</span></div><p>Market leaves, roasted squash, toasted seeds and citrus dressing. <span class="tag">V</span> <span class="tag">GF</span></p><p class="dish"><b>Sunday roast</b><span class="price">$28</span></p><p>Only on Sundays — beef or chicken, Yorkshire pudding, all the trimmings.</p></article>
+<article class="card"><div class="dish"><b>Desserts</b><span class="price">$9</span></div><p>Burnt honey panna cotta, olive-oil cake, or wood-oven baked apples. <span class="tag">V</span></p><p style="margin-top:14px"><b>Mains from $18.</b> Ask about today's specials and allergen-friendly options.</p></article>
+</div>
+</section>
+
+<section class="wrap" id="story" aria-label="Our story">
+<div class="story">
+<img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=800&q=80" alt="Restaurant table set with plates and glasses in a warm dining room" loading="lazy">
+<div class="story-in"><p class="kicker">From the chef</p><h2>Everything starts with the fire</h2><p>We cook the way our family always has — over real wood, in small batches, with what the season gives us. Vegetables from nearby farms, bread baked each morning, and meat rested properly before it reaches your plate.</p><p>Plates come to the middle of the table, because the best meals here are shared. Come hungry, stay a while, and let us look after you.</p><p><b>— The Olive &amp; Ember kitchen team</b><br><small style="color:var(--muted)">Sample story for this sample design.</small></p></div>
+</div>
+</section>
+
+<section class="wrap" aria-label="How it works">
+<p class="kicker">How it works</p><h2>Book in a minute, relax all evening</h2>
+<div class="steps" style="margin-top:18px">
+<div class="step"><div class="num">1</div><h3>Pick a table time</h3><p>Choose your day, time and party size below — or just call us.</p></div>
+<div class="step"><div class="num">2</div><h3>Arrive &amp; order</h3><p>We seat you, bring water and bread, and talk you through the menu.</p></div>
+<div class="step"><div class="num">3</div><h3>Relax &amp; enjoy</h3><p>Plates to share, no rush, and dessert if you have room.</p></div>
+</div>
+</section>
+
+<section class="wrap" id="hours" aria-label="Hours and prices">
+<div class="hours"><p class="kicker" style="color:#FDE68A">Hours &amp; prices</p><h2>Open for lunch and dinner</h2>
+<table><tr><td>Lunch</td><td>12pm – 3pm</td></tr><tr><td>Dinner</td><td>5pm – 10pm</td></tr><tr><td>Sunday roast</td><td>Sundays only, 12pm – 4pm</td></tr><tr><td>Mains</td><td>From $18 (sample prices)</td></tr></table>
+<p style="margin-top:14px">Closed Mondays. Walk-ins welcome — booking is best on Friday and Saturday nights.</p></div>
+</section>
+
+<section class="wrap" id="faq" aria-label="Frequently asked questions">
+<p class="kicker">Good to know</p><h2>Questions, answered</h2>
+<div style="margin-top:18px">
+<div class="faq-item"><button aria-expanded="false">Do I need to book?<span aria-hidden="true">+</span></button><div class="a" hidden>Walk-ins are welcome, but booking is best on Friday and Saturday evenings and for parties of 6 or more.</div></div>
+<div class="faq-item"><button aria-expanded="false">Do you cater for allergies?<span aria-hidden="true">+</span></button><div class="a" hidden>Yes — tell us when you book or when you arrive. We can adapt most dishes, and gluten-free and vegetarian options are marked on the menu.</div></div>
+<div class="faq-item"><button aria-expanded="false">Is there a kids menu?<span aria-hidden="true">+</span></button><div class="a" hidden>Yes. Smaller portions of pasta, chicken and flatbread, plus a simple dessert, for younger guests.</div></div>
+<div class="faq-item"><button aria-expanded="false">Do you do takeaway?<span aria-hidden="true">+</span></button><div class="a" hidden>Yes, for most dishes. Call ahead and we will have it ready — flatbread and pasta travel best.</div></div>
+<div class="faq-item"><button aria-expanded="false">Is there parking?<span aria-hidden="true">+</span></button><div class="a" hidden>Yes, free street parking on Ember Lane after 6pm, and a public car park two minutes away.</div></div>
+</div>
+</section>
+
+<section class="wrap" id="book" aria-label="Contact and reservation">
+<div class="grid2">
+<div class="contact">
+<p class="kicker">Reserve a table</p><h2>Book your table</h2>
+<p><b>Phone:</b> <a href="tel:+15550144420">(555) 014-4420</a><br><b>Address:</b> 7 Ember Lane, Springfield<br><b>Hours:</b> Lunch 12–3pm, Dinner 5–10pm</p>
+<div class="map" role="img" aria-label="Map placeholder: 7 Ember Lane, Springfield">📍 Map placeholder<br>7 Ember Lane, Springfield</div>
+<form id="bookform">
+<label for="name">Name</label><input id="name" name="name" required autocomplete="name">
+<label for="phone">Phone</label><input id="phone" name="phone" type="tel" required autocomplete="tel">
+<label for="date">Date</label><input id="date" name="date" type="date" required>
+<label for="time">Time</label><select id="time" name="time" required><option value="">Choose a time</option><option>12:00</option><option>1:00</option><option>5:30</option><option>7:00</option><option>8:30</option></select>
+<label for="party">Party size</label><select id="party" name="party" required><option value="">Choose party size</option><option>1–2 people</option><option>3–4 people</option><option>5–6 people</option><option>7+ people</option></select>
+<label for="msg">Message (optional)</label><textarea id="msg" name="msg" placeholder="Allergies, birthday, high chair…"></textarea>
+<button class="btn" type="submit" style="width:100%;margin-top:18px">Reserve a table</button>
+<p class="form-ok" id="formok" role="status">Thanks — this is a sample form, no message was sent.</p>
+</form>
+</div>
+<div>
+<div class="card"><h3>Why book with us?</h3><p>✓ Wood-fired dishes, cooked to order<br>✓ Family-style sharing plates<br>✓ Walk-ins welcome, bookings held 15 minutes<br>✓ Kids menu and allergen-friendly options</p></div>
+<div class="card" style="margin-top:16px"><h3>Private hire</h3><p>Our back room seats 20 for birthdays and family gatherings. Call (555) 014-4420 to ask.</p></div>
+</div>
+</div>
+</section>
+</main>
+
+<a class="sticky-call" href="tel:+15550144420">📞 Call now — (555) 014-4420</a>
+
+<footer>
+<p><b>Olive &amp; Ember Kitchen</b> — Sample design, not a real restaurant.</p>
+<p>All business details, reviews, prices and menus on this page are fictional samples for demonstration only.</p>
+<p>Photos: Unsplash &nbsp;•&nbsp; <span class="badge">Sample design</span></p>
+</footer>
+
+<script>
+document.querySelectorAll('.faq-item button').forEach(function(b){b.addEventListener('click',function(){var a=b.parentElement.querySelector('.a');var open=!a.hidden;a.hidden=open;b.setAttribute('aria-expanded',String(!open));b.querySelector('span').textContent=open?'+':'−';});});
+document.getElementById('bookform').addEventListener('submit',function(e){e.preventDefault();var ok=document.getElementById('formok');ok.style.display='block';ok.focus();});
+</script>
+</body>
+</html>

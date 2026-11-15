@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Harbor Homes — Agent Maya Bennett. Know what your home is really worth. A clear, honest home value in 24 hours — no pressure, no obligation. Sample design.">
+<title>Harbor Homes — Maya Bennett | Free Home Valuation in 24 Hours</title>
+<style>
+*{box-sizing:border-box}
+:root{--navy:#1E3A5F;--navy2:#152A45;--gold:#C5A880;--gold2:#A98F68;--ink:#1F2937;--muted:#5B6B7C;--soft:#F7F4EF;--line:#E6E0D6;--white:#fff}
+body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;color:var(--ink);background:var(--white);font-size:17px;line-height:1.6}
+h1,h2,h3{font-family:Georgia,"Times New Roman",serif;color:var(--navy);line-height:1.2;margin:0}
+h2{font-size:30px}h3{font-size:21px}
+p{margin:0 0 12px}a{color:var(--navy)}
+img{display:block;max-width:100%}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+section{padding:56px 0}
+.eyebrow{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold2);font-weight:700;margin-bottom:10px}
+.gold-rule{width:56px;height:3px;background:var(--gold);margin:14px 0 18px;border:0}
+.lead{color:var(--muted);font-size:18px;max-width:640px}
+:focus-visible{outline:3px solid #B45309;outline-offset:3px}
+/* top bar */
+.topbar{background:var(--navy2);color:#E8DCC8;font-size:14px;text-align:center;padding:9px 16px}
+.topbar strong{color:var(--gold)}
+/* header */
+header.site{position:sticky;top:0;background:rgba(255,255,255,.97);border-bottom:1px solid var(--line);z-index:20}
+.head{display:flex;align-items:center;gap:14px;padding:12px 0}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;min-width:0}
+.brand b{font-family:Georgia,serif;font-size:22px;color:var(--navy);white-space:nowrap}
+.brand small{display:block;font-family:system-ui,sans-serif;font-size:12px;color:var(--muted);letter-spacing:.08em;text-transform:uppercase}
+.badge{display:inline-block;font-size:12px;font-weight:700;background:#FEF3C7;color:#92400E;border:1px solid #FCD34D;padding:3px 9px;border-radius:999px;white-space:nowrap}
+nav{display:none;margin-left:auto;gap:22px}
+nav a{color:var(--navy);text-decoration:none;font-size:15px;font-weight:600}
+.btn{display:inline-block;background:var(--gold);color:#152A45;text-decoration:none;font-weight:800;padding:14px 22px;border-radius:8px;border:0;cursor:pointer;font-size:16px;min-height:52px;line-height:1.2}
+.btn:hover{background:#D6BC97}.btn-navy{background:var(--navy);color:#fff}.btn-navy:hover{background:#2A4A73}
+.btn-outline{background:transparent;color:#fff;border:2px solid #fff}
+.head .btn{padding:11px 16px;min-height:44px;font-size:15px;margin-left:auto}
+@media(min-width:1000px){nav{display:flex}.head .btn{margin-left:0}}
+/* hero */
+.hero{position:relative;padding:0;color:#fff;overflow:hidden}
+.hero img.bg{width:100%;height:560px;object-fit:cover;object-position:center}
+.hero .shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(21,42,69,.92) 0%,rgba(21,42,69,.72) 52%,rgba(21,42,69,.28) 100%)}
+.hero .content{position:absolute;inset:0;display:flex;align-items:center}
+.hero h1{color:#fff;font-size:40px;max-width:560px}
+.hero p{color:#E5E7EB;font-size:19px;max-width:520px;margin:16px 0 22px}
+.hero .cta{display:flex;flex-wrap:wrap;gap:12px}
+.trust{margin-top:22px;font-size:15px;color:#FDE68A}
+.trust span{color:#fff}
+@media(max-width:700px){.hero img.bg{height:620px}.hero h1{font-size:34px}.hero p{font-size:17px}}
+/* stats */
+.stats{background:var(--navy);color:#fff;padding:28px 0}
+.stats .row{display:grid;grid-template-columns:1fr;gap:18px;text-align:center}
+.stats b{font-family:Georgia,serif;font-size:32px;color:var(--gold);display:block}
+.stats span{font-size:14px;color:#CBD5E1}
+.stats small{display:block;font-size:12px;color:#94A3B8;margin-top:4px}
+@media(min-width:700px){.stats .row{grid-template-columns:1fr 1fr 1fr}}
+/* cards */
+.grid{display:grid;gap:18px;grid-template-columns:1fr;margin-top:28px}
+@media(min-width:700px){.grid{grid-template-columns:1fr 1fr}.grid.three{grid-template-columns:1fr 1fr 1fr}}
+.card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:22px}
+.card.soft{background:var(--soft)}
+.stars{color:#D97706;letter-spacing:2px;font-size:16px}
+.sample-tag{font-size:12px;font-weight:700;color:#92400E;background:#FEF3C7;border-radius:999px;padding:3px 9px;display:inline-block;margin-bottom:8px}
+.avatar{width:48px;height:48px;border-radius:50%;background:var(--navy);color:var(--gold);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:16px;flex-shrink:0}
+.person{display:flex;gap:12px;align-items:center;margin-top:16px}
+.person b{display:block;color:var(--navy)}.person span{font-size:14px;color:var(--muted)}
+/* services */
+.icon{width:52px;height:52px;border-radius:12px;background:#EEF2F7;display:flex;align-items:center;justify-content:center;margin-bottom:14px}
+.card h3{margin-bottom:8px}.card p{color:var(--muted);margin:0}
+/* value form */
+.value{background:var(--soft)}
+.value-grid{display:grid;gap:24px;grid-template-columns:1fr;margin-top:28px}
+@media(min-width:1000px){.value-grid{grid-template-columns:1.05fr .95fr;align-items:start}}
+.form-card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:26px;box-shadow:0 12px 32px rgba(30,58,95,.10)}
+form{display:grid;gap:14px}
+label{font-weight:700;font-size:15px;color:var(--navy);display:block;margin-bottom:5px}
+input,select,textarea{width:100%;padding:13px 14px;border:1px solid #CBD5E1;border-radius:8px;font-size:16px;font-family:inherit;background:#fff;color:var(--ink)}
+input:focus,select:focus,textarea:focus{border-color:var(--navy);outline:3px solid #FDE68A}
+.two{display:grid;gap:14px;grid-template-columns:1fr 1fr}
+.form-note{font-size:14px;color:var(--muted)}
+.success{background:#ECFDF5;border:1px solid #6EE7B7;color:#065F46;border-radius:10px;padding:14px;display:none}
+.photo-card{border-radius:16px;overflow:hidden;border:1px solid var(--line);background:#fff}
+.photo-card img{width:100%;height:300px;object-fit:cover}
+.photo-card .pad{padding:22px}
+.photo-card ul{margin:0;padding-left:20px;color:var(--muted)}
+.photo-card li{margin-bottom:8px}
+/* listings */
+.listing{padding:0;overflow:hidden}
+.listing img{width:100%;height:210px;object-fit:cover}
+.listing .pad{padding:20px}
+.price{font-family:Georgia,serif;font-size:26px;color:var(--navy)}
+.specs{font-size:14px;color:var(--muted);margin:8px 0}
+.specs b{color:var(--ink)}
+/* steps */
+.steps{display:grid;gap:18px;grid-template-columns:1fr;margin-top:28px}
+@media(min-width:700px){.steps{grid-template-columns:1fr 1fr 1fr}}
+.step{text-align:left}
+.step .num{width:46px;height:46px;border-radius:50%;background:var(--gold);color:#152A45;font-weight:800;display:flex;align-items:center;justify-content:center;font-size:19px;margin-bottom:14px}
+/* fees */
+.fees{background:var(--navy);color:#fff}
+.fees h2{color:#fff}.fees p{color:#E5E7EB;max-width:640px}
+.fees .gold-rule{background:var(--gold)}
+/* faq */
+.faq-item{border:1px solid var(--line);border-radius:12px;margin-bottom:12px;overflow:hidden}
+.faq-item button{width:100%;text-align:left;background:#fff;border:0;padding:18px;font-size:17px;font-weight:700;color:var(--navy);cursor:pointer;display:flex;justify-content:space-between;gap:12px;font-family:inherit}
+.faq-item .ans{display:none;padding:0 18px 18px;color:var(--muted)}
+.faq-item.open .ans{display:block}
+/* contact */
+.contact-grid{display:grid;gap:24px;grid-template-columns:1fr;margin-top:28px}
+@media(min-width:1000px){.contact-grid{grid-template-columns:1fr 1fr}}
+.map{height:220px;border-radius:12px;border:1px solid var(--line);background:#EAF0F6;display:flex;flex-direction:column;align-items:center;justify-content:center;color:var(--navy);gap:6px;text-align:center;padding:16px}
+.agent{display:flex;gap:16px;align-items:flex-start;margin-top:18px}
+.agent .avatar{width:64px;height:64px;font-size:22px}
+.sticky-call{display:flex;position:fixed;left:12px;right:12px;bottom:12px;z-index:30;background:var(--navy);color:#fff;text-align:center;text-decoration:none;font-weight:800;padding:15px;border-radius:12px;justify-content:center;box-shadow:0 8px 24px rgba(0,0,0,.25)}
+@media(min-width:641px){.sticky-call{display:none}}
+footer{background:var(--navy2);color:#CBD5E1;padding:36px 0 96px;font-size:14px}
+@media(min-width:641px){footer{padding-bottom:36px}}
+footer a{color:#E8DCC8}footer h3{color:#fff}
+</style>
+</head>
+<body>
+
+<div class="topbar"><strong>Free home valuation in 24 hours</strong> &nbsp;•&nbsp; No obligation &nbsp;•&nbsp; No upfront fee</div>
+
+<header class="site">
+<div class="wrap head">
+<a class="brand" href="#top" aria-label="Harbor Homes — home">
+<svg width="38" height="38" viewBox="0 0 40 40" aria-hidden="true"><rect x="2" y="2" width="36" height="36" rx="8" fill="#1E3A5F"/><path d="M20 9 L31 18 V30 H24 V23 H16 V30 H9 V18 Z" fill="#C5A880"/></svg>
+<span><b>Harbor Homes</b><small>Maya Bennett &nbsp;•&nbsp; Springfield</small></span>
+</a>
+<span class="badge">Sample design</span>
+<nav aria-label="Main navigation"><a href="#value">Free valuation</a><a href="#services">Services</a><a href="#sales">Recent sales</a><a href="#how">How it works</a><a href="#faq">FAQ</a><a href="#contact">Contact</a></nav>
+<a class="btn btn-navy" href="tel:+15550145530">Call (555) 014-5530</a>
+</div>
+</header>
+
+<main id="top">
+<!-- HERO -->
+<section class="hero" aria-label="Introduction">
+<img class="bg" src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1200&q=80" alt="Modern house exterior at dusk with warm lights on" fetchpriority="high">
+<div class="shade" aria-hidden="true"></div>
+<div class="content"><div class="wrap">
+<p class="eyebrow" style="color:#E8DCC8">Springfield &nbsp;•&nbsp; Independent agent</p>
+<h1>Know what your home is really worth</h1>
+<p>A clear, honest home value in 24 hours — no pressure, no obligation.</p>
+<div class="cta">
+<a class="btn" href="#value">Get a free home value</a>
+<a class="btn btn-outline" href="tel:+15550145530">Call Maya</a>
+</div>
+<p class="trust">★★★★★ <span>4.9 — Sample rating &nbsp;•&nbsp; 120+ homes valued (sample) &nbsp;•&nbsp; Free, no obligation</span></p>
+</div></div>
+</section>
+
+<!-- STATS -->
+<div class="stats"><div class="wrap row">
+<div><b>120+</b><span>Homes valued</span><small>Sample figure</small></div>
+<div><b>24 hours</b><span>Free value delivered</span><small>Sample promise</small></div>
+<div><b>98%</b><span>Would recommend</span><small>Sample satisfaction</small></div>
+</div></div>
+
+<!-- TRUST -->
+<section aria-label="What homeowners say"><div class="wrap">
+<p class="eyebrow">Trusted by local homeowners</p>
+<h2>Straight answers, honest pricing, no pressure</h2>
+<hr class="gold-rule">
+<p class="lead">Selling a home is the biggest decision most people make. You deserve an agent who tells you the truth about the price — even when it is not what you hoped to hear.</p>
+<div class="grid three">
+<article class="card"><span class="sample-tag">Sample review</span><div class="stars" aria-label="5 out of 5 stars">★★★★★</div><p style="margin-top:10px">“Maya gave us a clear value the next day, explained every number, and never pushed us to list. We sold for more than we expected.”</p><div class="person"><span class="avatar" aria-hidden="true">SW</span><div><b>Sarah &amp; Tom W.</b><span>Sold in Maplewood — sample review</span></div></div></article>
+<article class="card"><span class="sample-tag">Sample review</span><div class="stars" aria-label="5 out of 5 stars">★★★★★</div><p style="margin-top:10px">“As first-time buyers we had a hundred questions. Every one was answered plainly, and we never felt rushed into an offer.”</p><div class="person"><span class="avatar" aria-hidden="true">DR</span><div><b>Daniel R.</b><span>Bought in Harbor View — sample review</span></div></div></article>
+<article class="card"><span class="sample-tag">Sample review</span><div class="stars" aria-label="5 out of 5 stars">★★★★★</div><p style="margin-top:10px">“The valuation was honest, the photos were beautiful, and the house sold in two weeks. I knew exactly what was happening at every step.”</p><div class="person"><span class="avatar" aria-hidden="true">PK</span><div><b>Priya K.</b><span>Sold in Riverside — sample review</span></div></div></article>
+</div>
+</div></section>
+
+<!-- SERVICES -->
+<section id="services" style="background:var(--soft)" aria-label="Services"><div class="wrap">
+<p class="eyebrow">How I can help</p>
+<h2>One agent, from first question to front door</h2>
+<hr class="gold-rule">
+<div class="grid">
+<article class="card"><div class="icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#1E3A5F" stroke-width="2" aria-hidden="true"><path d="M3 11 L12 4 L21 11 M5 10 V20 H19 V10"/></svg></div><h3>Free home valuation</h3><p>A clear value for your home in 24 hours, based on recent local sales — not a guess from a website.</p></article>
+<article class="card"><div class="icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#1E3A5F" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21 L16.5 16.5"/></svg></div><h3>Buying help</h3><p>Shortlists that match your budget, your commute and your schools — and honest advice before you offer.</p></article>
+<article class="card"><div class="icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#1E3A5F" stroke-width="2" aria-hidden="true"><path d="M20 6 L9 17 L4 12"/></svg></div><h3>Selling help</h3><p>Honest pricing, beautiful photos, careful viewings — and a plan to get your home seen by the right buyers.</p></article>
+<article class="card"><div class="icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#1E3A5F" stroke-width="2" aria-hidden="true"><path d="M12 3 V21 M5 7 L12 3 L19 7 M3 21 H21"/></svg></div><h3>Honest pricing advice</h3><p>What your home is really worth today, what would raise it, and what would not be worth spending on.</p></article>
+<article class="card"><div class="icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#1E3A5F" stroke-width="2" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21 C4 16 8 14 12 14 C16 14 20 16 20 21"/></svg></div><h3>Viewing support</h3><p>I come with you to viewings, ask the questions you might miss, and help you compare homes fairly.</p></article>
+</div>
+</div></section>
+
+<!-- HOME VALUE FORM -->
+<section id="value" class="value" aria-label="Get a free home value"><div class="wrap">
+<p class="eyebrow">Free home valuation</p>
+<h2>Get your free home value in 24 hours</h2>
+<hr class="gold-rule">
+<p class="lead">Tell me about your home. I will send you a clear, honest value — and what it is based on — within one working day.</p>
+<div class="value-grid">
+<div class="form-card">
+<form id="valueForm" novalidate>
+<div><label for="address">Address of home</label><input id="address" name="address" type="text" placeholder="e.g. 14 Maplewood Drive, Springfield" autocomplete="street-address" required></div>
+<div class="two">
+<div><label for="beds">Bedrooms</label><select id="beds" name="bedrooms"><option>1</option><option>2</option><option selected>3</option><option>4</option><option>5+</option></select></div>
+<div><label for="baths">Bathrooms</label><select id="baths" name="bathrooms"><option>1</option><option selected>2</option><option>3</option><option>4+</option></select></div>
+</div>
+<div><label for="size">Approx size</label><input id="size" name="size" type="text" placeholder="e.g. 1,800 sq ft"></div>
+<div><label for="name">Your name</label><input id="name" name="name" type="text" autocomplete="name" required></div>
+<div class="two">
+<div><label for="phone">Phone</label><input id="phone" name="phone" type="tel" autocomplete="tel" required></div>
+<div><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" required></div>
+</div>
+<button class="btn btn-navy" type="submit" style="width:100%">Get my free value</button>
+<p class="form-note">Free, no obligation. I will only use your details to send your valuation.</p>
+<p class="success" id="formSuccess" role="status">Thanks — this is a sample form, no message was sent.</p>
+</form>
+</div>
+<aside class="photo-card" aria-label="Selling your home">
+<img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=800&q=80" alt="House keys and a signed agreement on a table" loading="lazy">
+<div class="pad">
+<h3>What your free value includes</h3>
+<ul>
+<li>An honest price range for your home today</li>
+<li>Three recent local sales it is based on</li>
+<li>What would raise the price — and what would not</li>
+<li>No obligation to list with me, ever</li>
+</ul>
+</div>
+</aside>
+</div>
+</div></section>
+
+<!-- RECENT SALES -->
+<section id="sales" aria-label="Recent sales"><div class="wrap">
+<p class="eyebrow">Recent sales — sample listings</p>
+<h2>Homes I have helped sell</h2>
+<hr class="gold-rule">
+<p class="lead">Every home below is a fictional sample listing, shown to show how a real sales page would look.</p>
+<div class="grid three">
+<article class="card listing"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="Bright modern home exterior with a front garden" loading="lazy"><div class="pad"><span class="sample-tag">Sample listing</span><p class="price">$485,000</p><h3>Maplewood</h3><p class="specs"><b>4 beds</b> • <b>2 baths</b> • <b>1,950 sq ft</b></p><p style="color:var(--muted)">A bright family home near Maplewood Park. Sold after two weeks of viewings.</p></div></article>
+<article class="card listing"><img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1200&q=80" alt="Modern house exterior at dusk with warm lights on" loading="lazy"><div class="pad"><span class="sample-tag">Sample listing</span><p class="price">$329,000</p><h3>Harbor View</h3><p class="specs"><b>3 beds</b> • <b>2 baths</b> • <b>1,420 sq ft</b></p><p style="color:var(--muted)">A calm, light home two streets from the water. First-time buyers moved in within a month.</p></div></article>
+<article class="card listing"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="Bright modern home exterior with a front garden" loading="lazy"><div class="pad"><span class="sample-tag">Sample listing</span><p class="price">$612,000</p><h3>Riverside</h3><p class="specs"><b>5 beds</b> • <b>3 baths</b> • <b>2,600 sq ft</b></p><p style="color:var(--muted)">A large riverside home with a garden and home office. Sold above the asking price.</p></div></article>
+</div>
+</div></section>
+
+<!-- HOW IT WORKS -->
+<section id="how" style="background:var(--soft)" aria-label="How it works"><div class="wrap">
+<p class="eyebrow">How it works</p>
+<h2>Three simple steps</h2>
+<hr class="gold-rule">
+<div class="steps">
+<div class="step"><span class="num">1</span><h3>Tell me about your home</h3><p style="color:var(--muted)">Fill in the form above — address, beds, baths and size. It takes two minutes.</p></div>
+<div class="step"><span class="num">2</span><h3>Get your value in 24 hours</h3><p style="color:var(--muted)">I compare your home with recent local sales and send you a clear price range, with the evidence.</p></div>
+<div class="step"><span class="num">3</span><h3>Decide your next step</h3><p style="color:var(--muted)">Sell, wait, or just keep the number for later. The choice is yours — there is no pressure from me.</p></div>
+</div>
+</div></section>
+
+<!-- FEES -->
+<section class="fees" aria-label="Fees"><div class="wrap">
+<p class="eyebrow" style="color:var(--gold)">Fees — sample terms</p>
+<h2>No upfront fee</h2>
+<hr class="gold-rule">
+<p>Commission only if you sell — sample terms. The free valuation costs nothing, and you pay nothing unless your home sells with me. I will put the exact fee in writing before you agree to anything.</p>
+</div></section>
+
+<!-- FAQ -->
+<section id="faq" aria-label="Frequently asked questions"><div class="wrap">
+<p class="eyebrow">Questions</p>
+<h2>Frequently asked questions</h2>
+<hr class="gold-rule">
+<div class="faq-item"><button type="button" aria-expanded="false">How fast is the valuation? <span aria-hidden="true">+</span></button><div class="ans"><p>Within 24 hours on a working day. If you send the form on a weekend, I will reply on Monday morning.</p></div></div>
+<div class="faq-item"><button type="button" aria-expanded="false">What does it cost? <span aria-hidden="true">+</span></button><div class="ans"><p>Nothing. The valuation is free, and there is no upfront fee. Commission is only paid if your home sells — sample terms.</p></div></div>
+<div class="faq-item"><button type="button" aria-expanded="false">Do I have to sell with you? <span aria-hidden="true">+</span></button><div class="ans"><p>No. The valuation is yours to keep, whether you sell, wait, or choose another agent. There is no obligation.</p></div></div>
+<div class="faq-item"><button type="button" aria-expanded="false">How do you price a home? <span aria-hidden="true">+</span></button><div class="ans"><p>From recent sales of similar homes nearby, the condition of your home, and what buyers are paying now — not from a computer guess alone.</p></div></div>
+<div class="faq-item"><button type="button" aria-expanded="false">Can you help me buy? <span aria-hidden="true">+</span></button><div class="ans"><p>Yes. I help buyers find homes, arrange viewings, and make offers — and I will tell you honestly when a home is overpriced.</p></div></div>
+</div></section>
+
+<!-- CONTACT -->
+<section id="contact" style="background:var(--soft)" aria-label="Contact"><div class="wrap">
+<p class="eyebrow">Contact</p>
+<h2>Talk to Maya</h2>
+<hr class="gold-rule">
+<div class="contact-grid">
+<div>
+<p><strong>Phone:</strong> <a href="tel:+15550145530">(555) 014-5530</a><br>
+<strong>Address:</strong> 20 Harbor View, Springfield<br>
+<strong>Hours:</strong> Mon–Sat, 9am–6pm</p>
+<div class="map" role="img" aria-label="Map placeholder: 20 Harbor View, Springfield">
+<svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#1E3A5F" stroke-width="2" aria-hidden="true"><path d="M12 21 C7 16 3 12.5 3 9 A9 9 0 0 1 21 9 C21 12.5 17 16 12 21 Z"/><circle cx="12" cy="9" r="3"/></svg>
+<strong>Map placeholder</strong><span>20 Harbor View, Springfield</span>
+</div>
+<div class="agent">
+<span class="avatar" aria-hidden="true">MB</span>
+<div><h3 style="margin-bottom:4px">Maya Bennett</h3><p style="color:var(--muted);margin:0">Independent agent in Springfield. I help homeowners understand what their home is worth — and help buyers find a home they love. This is a fictional sample bio.</p></div>
+</div>
+</div>
+<div class="card">
+<h3>Prefer to call first?</h3>
+<p style="color:var(--muted)">Call me and I will answer your questions plainly — no sales script, no pressure. If I am with a client, leave a message and I will call you back the same day.</p>
+<p><a class="btn btn-navy" href="tel:+15550145530">Call (555) 014-5530</a></p>
+<p style="color:var(--muted);font-size:15px">Or use the free valuation form above — it takes two minutes, and your value arrives within 24 hours.</p>
+</div>
+</div>
+</div></section>
+</main>
+
+<footer>
+<div class="wrap">
+<h3>Harbor Homes — Maya Bennett</h3>
+<p>Sample design — not a real agent. All business names, reviews, prices, listings and contact details on this page are fictional and for demonstration only.</p>
+<p>Photos: Unsplash.</p>
+<p><a href="#top">Back to top</a> &nbsp;•&nbsp; <a href="tel:+15550145530">Call (555) 014-5530</a></p>
+</div>
+</footer>
+
+<a class="sticky-call" href="tel:+15550145530">Call now — (555) 014-5530</a>
+
+<script>
+document.querySelectorAll('.faq-item button').forEach(function(b){
+  b.addEventListener('click',function(){
+    var item=b.parentElement, open=item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(function(i){i.classList.remove('open');i.querySelector('button').setAttribute('aria-expanded','false');});
+    if(!open){item.classList.add('open');b.setAttribute('aria-expanded','true');}
+  });
+});
+document.getElementById('valueForm').addEventListener('submit',function(e){
+  e.preventDefault();
+  var s=document.getElementById('formSuccess');
+  s.style.display='block'; s.focus && s.focus();
+  s.scrollIntoView({behavior:'smooth',block:'center'});
+});
+</script>
+</body>
+</html>
